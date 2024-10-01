@@ -1,8 +1,8 @@
 {
     "Sambhar": {
-        "ingredient": {
-
-        },
+        "name": "Sambhar",
+        "subname": "pressure cooker method",
+        "ingredient": {      },
         "steps": {
             "1":"fsjdgfjdshf", 
             "2":"fsjdgfjdshf", 
@@ -23,6 +23,8 @@
          "source link": ""
     },
     "Rasam": {
+        "name": "Rasam",
+        "subname": "with pepper",
         "ingredient": {
 
         },

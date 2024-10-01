@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 
 export const Dishes = (state) => {
     const [data, setData] = useState(null)
-
+ 
     useEffect(()=> {
         fetch ('../Data/recipes.json')
         .then(response => response.json())
@@ -11,12 +11,18 @@ export const Dishes = (state) => {
         .catch(error => console.error("Error fetching data", error))
     }, [])
 
-    data = data.filter(item => item.state === state)
+    
 
     if (!data) {
         return <div>Loading...</div>
     }
+    let dishByState = Object.values(data).filter(item=> item.state === "TamilNadu")
+   
   return (
-    <div>Dishes</div>
+    <div>{dishByState.map((item)=> (
+      <div>{item.name}, ({item.subname})</div>
+    ))}
+   
+    </div>
   )
 }
