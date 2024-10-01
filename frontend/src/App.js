@@ -10,6 +10,7 @@ import {VegNonVeg} from './Components/VegNonVeg'
 import { Navigation } from './Components/Navigation';
 import {Home} from './Components/Home'
 import { Dishes } from './Components/Dishes';
+import { Recipe } from './Components/Recipe';
 
 function App() {
  
@@ -20,8 +21,8 @@ function App() {
       <Routes>
       <Route path ='/' element = {<Home/>}></Route>
       <Route path ='/dishes/:id' element = {<Dishes/>}></Route>
+      <Route path ='/recipe/:id' element = {<Recipe/>}></Route>
       {/* <Route path ='/' element = {<Home/>}></Route>
-      <Route path ='/' element = {<Home/>}></Route>
       <Route path ='/' element = {<Home/>}></Route> */}
       </Routes>
     </div>
