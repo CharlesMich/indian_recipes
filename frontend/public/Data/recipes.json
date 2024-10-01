@@ -3,6 +3,7 @@
         "id": "1",
         "name": "Sambhar",
         "subname": "pressure cooker method",
+        "EnglishName":"Lentil Soup with Vegetables",
         "img": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Pumpkin_sambar.JPG",
         "ingredient": {"Onions": "4 chopped",
     "Tamarind": "4 chopped",
@@ -35,6 +36,7 @@
         "id": "2",
         "name": "Rasam",
         "subname": "with pepper",
+        "EnglishName":"Spicy South Indian Soup",
         "img": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Rasam.JPG",
         "ingredient": {
 

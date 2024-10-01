@@ -15,22 +15,22 @@ export const Home = () => {
   };
 
   return (
-    <div className=" bg-gray-100">
-    <ul className="tabs flex flex-row gap-10">
-      <div>Sort by</div>
-      <li className={activeTab === 0 ? 'active' : ''} onClick={() => handleTabClick(0)}>
+    <div className="max-container bg-gray-100">
+    <ul className="tabs flex flex-row gap-10 mx-20 mt-20">
+      <div className="font-semibold">Sort by</div>
+      <li className={activeTab === 0 ? 'active text-coral-red cursor-pointer' : 'cursor-pointer'} onClick={() => handleTabClick(0)}>
        State
       </li>
-      <li className={activeTab === 1 ? 'active' : ''} onClick={() => handleTabClick(1)}>
+      <li className={activeTab === 1 ? 'active  text-coral-red cursor-pointer' : 'cursor-pointer'} onClick={() => handleTabClick(1)}>
         Cuisine
       </li>
-      <li className={activeTab === 2 ? 'active' : ''} onClick={() => handleTabClick(2)}>
+      <li className={activeTab === 2 ? 'active  text-coral-red cursor-pointer' : 'cursor-pointer'} onClick={() => handleTabClick(2)}>
         Meal
       </li>
-      <li className={activeTab === 3 ? 'active' : ''} onClick={() => handleTabClick(3)}>
+      <li className={activeTab === 3 ? 'active  text-coral-red cursor-pointer' : 'cursor-pointer'} onClick={() => handleTabClick(3)}>
        Veg / Non Veg
       </li>
-      <li className={activeTab === 4 ? 'active' : ''} onClick={() => handleTabClick(4)}>
+      <li className={activeTab === 4 ? 'active  text-coral-red' : ''} onClick={() => handleTabClick(4)}>
        Ingredient
       </li>
     </ul>
