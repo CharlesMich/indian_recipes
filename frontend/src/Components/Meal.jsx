@@ -24,8 +24,8 @@ export const Meal = () => {
          <div className="flex sm:w-[300px] 
                   sm:min-w-[200px] w-full rounded-
                   [20px] shadow-3xl px-5 py-5 bg-white">
-         <div className="flex flex-row items-center gap-3">
-           <img src={item.img} alt={""} width={48} height={24}/>
+         <div className="flex flex-row items-end gap-3">
+           <img src={item.img} alt={""} width={48}/>
           
            <h4 className="mt-5 font-palanquin text-2xl leading-normal font-bold">{item.meal}</h4>
            {/* <p className="mt-3 break-words font-montserrat text-lg leading-normal text-slate-gray">{item}</p> */}

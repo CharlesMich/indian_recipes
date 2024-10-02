@@ -1,26 +1,26 @@
 const states = [
     {
         id: 1,
-        img: "",
+        img: "../Images/andaman.png",
         color: "red",
         state: "Andaman and Nicobar"
     },
     {
         id: 2,
-        img: "",
+        img: "../Images/andhra.png",
         color: "red",
         state: "Andhra Pradesh"
     },
     {
         id: 3,
-        img: "",
+        img: "../Images/arunachal.png",
         color: "red",
         state: "Arunachal Pradesh"
     },
 
     {
         id: 4,
-        img: "",
+        img: "../Images/assam.png",
         color: "red",
         state: "Assam"
     },
@@ -74,7 +74,7 @@ const states = [
     },
     {
         id: 12,
-        img: "",
+        img: "../Images/gujarat.png",
         color: "red",
         state: "Gujarat"
     },
@@ -103,35 +103,130 @@ const states = [
     },
     {
         id: 17,
-        img: "",
+        img: "../Images/karnataka.png",
         color: "red",
         state: "Karnataka"
     },
     {
         id: 18,
-        img: "../Images/kerala",
+        img: "../Images/kerala.png",
         color: "red",
         state: "Kerala"
     },
-    "Ladakh",
-    "Lakshadweep",
-    "Madhya Pradesh",
-    "Maharashtra",
-    "Manipur",
-    "Meghalaya",
-    "Mizoram",
-    "Nagaland",
-    "Odisha",
-    "Puducherry",
-    "Punjab",
-    "Rajasthan",
-    "Sikkim",
-    "TamilNadu",
-    "Telangana",
-    "Tripura",
-    "Uttar Pradesh",
-    "Uttarakhand",
-    "West Bengal"
+    {
+        id: 19,
+        img: "../Images/kerala",
+        color: "red",
+        state: "Ladakh"
+    },
+    {
+        id: 20,
+        img: "../Images/kerala",
+        color: "red",
+        state: "Lakshadweep"
+    },
+    {
+        id: 21,
+        img: "../Images/kerala",
+        color: "red",
+        state: "Madhya Pradesh"
+    },
+    {
+        id: 22,
+        img: "../Images/kerala",
+        color: "red",
+        state: "Maharashtra"
+    },
+    {
+        id: 23,
+        img: "../Images/kerala",
+        color: "red",
+        state: "Manipur"
+    },
+    {
+        id: 24,
+        img: "../Images/kerala",
+        color: "red",
+        state: "Meghalaya"
+    },
+    {
+        id: 25,
+        img: "../Images/kerala",
+        color: "red",
+        state: "Mizoram"
+    },
+    {
+        id: 26,
+        img: "../Images/kerala",
+        color: "red",
+        state: "Nagaland"
+    },
+    {
+        id: 27,
+        img: "../Images/kerala",
+        color: "red",
+        state: "Odisha"
+    },
+    {
+        id: 28,
+        img: "../Images/kerala",
+        color: "red",
+        state: "Puducherry"
+    },
+    {
+        id: 28,
+        img: "../Images/kerala",
+        color: "red",
+        state: "Punjab"
+    },
+    {
+        id: 28,
+        img: "../Images/kerala",
+        color: "red",
+        state: "Rajasthan"
+    },
+    {
+        id: 28,
+        img: "../Images/kerala",
+        color: "red",
+        state: "Sikkim"
+    },
+    {
+        id: 28,
+        img: "../Images/tamilnadu.webp",
+        color: "red",
+        state: "TamilNadu"
+    },
+    {
+        id: 28,
+        img: "../Images/kerala",
+        color: "red",
+        state: "Telangana"
+    },
+    {
+        id: 28,
+        img: "../Images/kerala",
+        color: "red",
+        state: "Tripura"
+    },
+    {
+        id: 28,
+        img: "../Images/kerala",
+        color: "red",
+        state: "Uttar Pradesh"
+    },
+    {
+        id: 28,
+        img: "../Images/kerala",
+        color: "red",
+        state: "Uttarakhand"
+    },
+    {
+        id: 28,
+        img: "../Images/kerala",
+        color: "red",
+        state: "West Bengal"
+    },
 ]
 
 export default states

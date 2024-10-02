@@ -1,7 +1,7 @@
 const meal = [
     {
         id: 1,
-        img: "../../Images/bread.png",
+        img: "../../Images/appetizer.png",
         meal: "appetizer"
     },
 
@@ -22,7 +22,7 @@ const meal = [
     },
     {
         id: 5,
-        img: "",
+        img: "../../Images/curry.png",
         meal: "curry"
     },
     {
@@ -32,7 +32,7 @@ const meal = [
     },
     {
         id: 7,
-        img: "",
+        img: "../../Images/snack.png",
         meal: "snack"
     },
     {
