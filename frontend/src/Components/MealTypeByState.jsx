@@ -6,14 +6,20 @@ import { useParams } from 'react-router-dom'
 
 export const MealTypeByState = () => {
 
-    // const id = useParams().id
-
+    const id = useParams().id
+    console.log(id)
     const [data, setData] = useState(null);
 
     console.log(data)
 
      useEffect(()=> {
-      fetch('../Data/meal.json')
+      fetch('/Data/meal.json', {
+        headers : { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+         }
+  
+      })
       .then(response => response.json())
       .then(data => setData(data))
       .catch(error => console.error("Error fetching data", error))
@@ -25,6 +31,7 @@ export const MealTypeByState = () => {
       return (
        <div className="flex flex-col min-h-screen justify-between bg-gray-100">
         {/* <section className="max-container flex justify-center flex-wrap gap-9 mb-10"> */}
+        {/* <div><h1>From the culinary world of </h1></div> */}
        <div  className="max-container flex justify-center flex-wrap gap-9 my-10">{data.meal.map((item)=> (
          <div className="flex sm:w-[300px] 
                   sm:min-w-[200px] w-full rounded-
