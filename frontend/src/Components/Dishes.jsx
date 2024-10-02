@@ -36,8 +36,14 @@ export const Dishes = () => {
   })
   
   if(dishByState.length === 0){
-    return <div>{`There is currently no ${myMeal} dishes listed in ${myState}. We are regularly adding more recipes. Please check back later. If you have a recipe to share, please head to the submit recipe tab and add your recipe for review`} </div>
-  }
+   
+    return (
+      <div className="flex flex-col min-h-screen justify-between bg-gray-100">
+    <div className='max-container flex  flex-col  my-10'>{`There is currently no ${myMeal} dishes listed in ${myState}. We are regularly adding more recipes. Please check back later. If you have a recipe to share, please head to the submit recipe tab and add your recipe for review`} </div>
+      </div>
+  
+    )
+   }
    
   return (
     <div className="flex flex-col min-h-screen justify-between bg-gray-100">
