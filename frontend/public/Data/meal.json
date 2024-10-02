@@ -1,12 +1,13 @@
 {"meal": [
     "breakfast", 
-    "entree", 
+    "curry", 
     "soup", 
-    "savory", 
+    "snack", 
     "drink",
     "sweet", 
     "bread", 
     "biriyani", 
-    "tandoori"
+    "tandoori",
+    "rice"
     ]
 }

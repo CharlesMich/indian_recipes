@@ -22,7 +22,7 @@ export const State = () => {
        <div className="flex flex-col min-h-screen justify-between bg-gray-100">
         {/* <section className="max-container flex justify-center flex-wrap gap-9 mb-10"> */}
        <div  className="max-container flex justify-center flex-wrap gap-9 my-10">{data.states.map((item, idx)=> (
-         <Link to={`/state/mealtype/${idx}`} state={{abc: item}} key={idx}>
+         <Link to={`/state/mealtype/${idx}`} state={{myState: item}} key={idx}>
           <div className="flex sm:w-[300px] 
                   sm:min-w-[200px] w-full rounded-
                   [20px] shadow-3xl px-5 py-5 bg-white">

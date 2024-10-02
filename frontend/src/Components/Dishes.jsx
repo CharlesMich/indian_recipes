@@ -1,10 +1,20 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
+import { useParams } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
-export const Dishes = (state) => {
+export const Dishes = () => {
+
+    const id = useParams().id
+    const location = useLocation()
+    const { myState, myMeal } = location.state 
+
+    console.log(myState, myMeal)
+
     const [data, setData] = useState(null)
- 
+    
+
     useEffect(()=> {
         fetch ('../Data/recipes.json')
         .then(response => response.json())
@@ -14,14 +24,20 @@ export const Dishes = (state) => {
 
     
 
+    
+
     if (!data) {
         return <div>Loading...</div>
     }
-    let dishByState = Object.values(data).filter(item=> item.state === "TamilNadu").sort(function(a, b){
+    let dishByState = Object.values(data).filter(item=> item.state === myState && item.meal === myMeal).sort(function(a, b){
       if(a.name < b.name) { return -1; }
       if(a.name > b.name) { return 1; }
       return 0;
   })
+  
+  if(dishByState.length === 0){
+    return <div>{`There is currently no ${myMeal} dishes listed in ${myState}. We are regularly adding more recipes. Please check back later. If you have a recipe to share, please head to the submit recipe tab and add your recipe for review`} </div>
+  }
    
   return (
     <div className="flex flex-col min-h-screen justify-between bg-gray-100">
