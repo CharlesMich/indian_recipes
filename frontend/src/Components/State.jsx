@@ -7,8 +7,6 @@ import states from '../Constants/state'
 
 export const State = () => {
     // const [data, setData] = useState(null);
-
-    console.log(states)
   
     // useEffect(()=> {
     //   fetch('../Data/states.json')

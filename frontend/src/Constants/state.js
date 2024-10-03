@@ -27,48 +27,48 @@ const states = [
 
     {
         id: 5,
-        img: "",
+        img: "../Images/bihar.png",
         color: "red",
         state: "Bihar"
     },
 
     {
         id: 6,
-        img: "",
+        img: "../Images/chandigarh.png",
         color: "red",
         state: "Chandigarh"
     },
 
     {
         id: 7,
-        img: "",
+        img: "../Images/chattisgarh.png",
         color: "red",
         state: "Chhattisgarh"
     },
 
     {
         id: 8,
-        img: "",
+        img: "../Images/dadar.png",
         color: "red",
-        state: "Dadra and Nagar Haveli"
+        state: "Dadra & Nagar Haveli"
     },
 
     {
         id: 9,
-        img: "",
+        img: "../Images/daman.png",
         color: "red",
         state: "Daman and Diu"
     },
 
     {
         id: 10,
-        img: "",
-        color: "red",
+        img: "../Images/delhi.png",
+        color: "",
         state: "Delhi"
     },
     {
         id: 11,
-        img: "",
+        img: "../Images/goa.png",
         color: "red",
         state: "Goa"
     },

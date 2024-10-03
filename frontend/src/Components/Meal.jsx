@@ -5,8 +5,6 @@ import meal from '../Constants/meal'
 export const Meal = () => {
     const [data, setData] = useState(null);
 
-    console.log(meal)
-
     useEffect(()=> {
       fetch('../Data/meal.json')
       .then(response => response.json())

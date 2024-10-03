@@ -4,7 +4,8 @@ import {State }from './State'
 import {Cuisine} from './Cuisine'
 import {Ingredient} from './Ingredient'
 import {Meal} from './Meal'
-import {VegNonVeg} from './VegNonVeg'
+import {Veg} from './Veg'
+import { NonVegetarian } from './NonVegetarian'
 
 export const Home = () => {
 
@@ -17,7 +18,7 @@ export const Home = () => {
   return (
     <div className="max-container bg-gray-100">
     <ul className="tabs flex flex-row gap-10 mx-20 mt-20">
-      <div className="font-semibold">Sort by</div>
+      <div className="font-semibold">Browse by</div>
       <li className={activeTab === 0 ? 'active text-coral-red cursor-pointer' : 'cursor-pointer'} onClick={() => handleTabClick(0)}>
        State
       </li>
@@ -28,10 +29,10 @@ export const Home = () => {
         Meal
       </li>
       <li className={activeTab === 3 ? 'active  text-coral-red cursor-pointer' : 'cursor-pointer'} onClick={() => handleTabClick(3)}>
-       Veg / Non Veg
+       Vegetarian
       </li>
       <li className={activeTab === 4 ? 'active  text-coral-red' : ''} onClick={() => handleTabClick(4)}>
-       Ingredient
+       Non Vegetarian
       </li>
     </ul>
 
@@ -39,8 +40,8 @@ export const Home = () => {
       {activeTab === 0 && <State />}
       {activeTab === 1 && <Cuisine />}
       {activeTab === 2 && <Meal/>}
-      {activeTab === 3 && <VegNonVeg/>}
-      {activeTab === 4 && <Ingredient/>}
+      {activeTab === 3 && <Veg/>}
+      {activeTab === 4 && <NonVegetarian/>}
     </div>
   </div>
   )

@@ -10,8 +10,6 @@ export const Dishes = () => {
     const location = useLocation()
     const { myState, myMeal } = location.state 
 
-    console.log(myState, myMeal)
-
     const [data, setData] = useState(null)
     
 

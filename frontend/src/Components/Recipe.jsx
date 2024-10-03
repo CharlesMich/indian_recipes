@@ -5,7 +5,6 @@ import { useParams } from 'react-router-dom'
 export const Recipe = () => {
 
   const id = useParams().id
-  console.log(id)
 
   const [data, setData] = useState(null)
  
