@@ -21,47 +21,47 @@ const vegetarian = [
     },
     {
         id: 5,
-        img: "",
+        img: "../../Images/carrot.png",
         veg: "carrot"
     },
     {
         id: 6,
-        img: "",
+        img: "../../Images/bittermelon.png",
         veg: "bitter melon"
     },
     {
         id: 7,
-        img: "",
+        img: "../../Images/okra.png",
         veg: "lady's finger (okra)"
     },
     {
         id: 8,
-        img: "",
+        img: "../../Images/eggplant.png",
         veg: "brinjal (eggplant)"
     },
     {
         id: 9,
-        img: "",
+        img: "../../Images/pumpkin.png",
         veg: "pumpkin"
     },
     {
         id: 10,
-        img: "",
+        img: "../../Images/drumstick.png",
         veg: "drumstick"
     },
     {
         id: 11,
-        img: "",
+        img: "../../Images/peas.png",
         veg: "peas"
     },
     {
         id: 12,
-        img: "",
+        img: "../../Images/beans.png",
         veg: "beans (french beans)"
     },
     {
         id: 13,
-        img: "",
+        img: "../../Images/bellpepper.png",
         veg: "bell pepper (capsicum)"
     }
 ]

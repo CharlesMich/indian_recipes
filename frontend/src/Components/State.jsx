@@ -30,7 +30,7 @@ export const State = () => {
          <div className="flex flex-row items-center gap-3">
            <img src={item.img} alt="" width={48} height={24}/>
           
-           <h4 className="mt-5 font-palanquin text-xl leading-normal font-semibold">{item.state}</h4>
+           <h4 className="font-palanquin text-xl leading-normal font-semibold">{item.state}</h4>
            {/* <p className="mt-3 break-words font-montserrat text-lg leading-normal text-slate-gray">{item}</p> */}
            </div>
           

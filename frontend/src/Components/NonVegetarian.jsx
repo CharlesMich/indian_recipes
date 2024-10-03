@@ -17,7 +17,7 @@ export const NonVegetarian = () => {
       <div className="flex sm:w-[300px] 
               sm:min-w-[200px] w-full rounded-
               [20px] shadow-3xl px-5 py-5 bg-white">
-     <div className="flex flex-row items-center gap-3 my-2">
+     <div className="flex flex-row items-center gap-3">
        <img src={item.img} alt="" width={48} height={24}/>
       
        <h4 className="font-palanquin text-xl  font-semibold">{item.nonveg}</h4>

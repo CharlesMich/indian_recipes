@@ -49,11 +49,11 @@ const meal = [
         id: 10,
         img: "../../Images/sweet.png",
         meal: "sweet"
-    },
-    {
-        id: 11,
-        img: "../../Images/tandoori.png",
-        meal: "tandoori"
     }
+    // {
+    //     id: 11,
+    //     img: "../../Images/tandoori.png",
+    //     meal: "tandoori"
+    // }
 ]
 export default meal

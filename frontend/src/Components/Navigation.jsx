@@ -17,12 +17,12 @@ export const Navigation = () => {
       cname: "border-t font-medium w-full flex justify-center p-2.5 mt-3 lg:border-none lg:p-0 lg:mt-0 lg:w-auto",
       access: 'all'
     },
-    {
-      title:"Home",
-      href:"/",
-      cname: "border-t font-medium w-full flex justify-center p-2.5 mt-3 lg:border-none lg:p-0 lg:mt-0 lg:w-auto",
-      access: 'all'
-    },
+    // {
+    //   title:"Home",
+    //   href:"/",
+    //   cname: "border-t font-medium w-full flex justify-center p-2.5 mt-3 lg:border-none lg:p-0 lg:mt-0 lg:w-auto",
+    //   access: 'all'
+    // },
     {
       title:"Submit Recipe",
       href:"/",
@@ -49,7 +49,7 @@ export const Navigation = () => {
     <nav className="sticky top-0 w-full bg-white items-center flex justify-center p-4">
       <div className="flex justify-between sm:justify-between items-center w-full flex-wrap lg:flex-nowrap max-container1">
         <a href="/"  className="flex items-center">
-        <div><span className="self-center text-2xl md:text-3xl font-regular  font-rochester whitespace-nowrap text-black">Title</span><span className="self-center text-2xl md:text-3xl font-regular font-rochester whitespace-nowrap text-coral-red"> Here</span></div>
+        <div><span className="self-center text-2xl md:text-3xl font-regular  font-sans whitespace-nowrap text-black">FLAVORFUL</span><span className="self-center text-2xl md:text-3xl font-regular font-serif whitespace-nowrap text-coral-red"> INDIA</span></div>
         </a>
         <button  className="flex justify-end lg:hidden ring-1 ring-white rounded"  onClick={showNav}>
         {!toggle ? <i className="fas fa-bars text-black w-9 h-9 flex justify-center items-center hover:text-blue"></i> : <i className="fas fa-x text-black w-9 h-9 flex justify-center items-center hover:text-blue"></i>}
