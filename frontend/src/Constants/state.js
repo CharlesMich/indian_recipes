@@ -169,7 +169,7 @@ const states = [
     },
     {
         id: 28,
-        img: "../Images/pondicherry.png",
+        img: "../Images/pondichery.png",
         color: "red",
         state: "Puducherry"
     },

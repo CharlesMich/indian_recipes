@@ -1,32 +1,32 @@
 const nonveg = [
     {
         id: 1,
-        img: "",
+        img: "../../Images/chicken.png",
         nonveg: "chicken"
     },
     {
         id: 2,
-        img: "",
+        img: "../../Images/beef.jpg",
         nonveg: "beef"
     },
     {
         id: 3,
-        img: "",
+        img: "../../Images/fish.png",
         nonveg: "fish"
     },
     {
         id: 4,
-        img: "",
+        img: "../../Images/pork.png",
         nonveg: "pork"
     },
     {
         id: 5,
-        img: "",
+        img: "../../Images/egg.png",
         nonveg: "egg"
     },
     {
         id: 6,
-        img: "",
+        img: "../../Images/seafood.png",
         nonveg: "seafood"
     },
 ]

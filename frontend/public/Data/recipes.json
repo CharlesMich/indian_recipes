@@ -59,7 +59,40 @@
           "source":"",
          "source link": "",
           "notes": ""
-        
+    },
+    "Ambur Biriyani (chicken)": {
+        "id": "3",
+        "name": "Ambur Biriyani",
+        "subname": "From Ambur in Vellore district",
+        "EnglishName":"Flavored rice with meat",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Pumpkin_sambar.JPG",
+        "main_ingredient": "chicken",
+        "ingredient": {"Onions": "4 chopped",
+    "Tamarind": "4 chopped",
+    "Tomatoes": "4 chopped",
+    "Squash": "4 chopped",
+    "Zuchini": "4 chopped",
+    "Salt": "4 chopped",
+    "water": "4 chopped"
+       },
+        "steps": {
+            "1":"Add 1 cup toor dal (yellow split peas), ½ cup red lentils, 4 cups water to a pressure cooker, instant pot, or large dutch oven. Cook until the dal is soft, broken down and completely cooked, about 20 minutes in a pressure cooker or instant pot. Alternatively the dal will take about 1 hour in a dutch oven.", 
+            "2":"If using tamarind pods, add 3 tamarind pods to a small bowl and pour ½ cup hot water into it, soak for 15 minutes. Then use your hands to mash out pulp. Strain tamarind water, set aside until ready to use.", 
+            "3":"In a different large pot or dutch oven, heat ¼ cup vegetable oil over medium heat until it shimmers. Add 1 tsp. mustard seeds, and cook until spluttering, about 10 seconds. Then add 6 cloves garlic, peeled and smashed, 2 Thai green chilis, sliced and saute until garlic is fragrant and the edges begin to brown, 2 minutes. Now add 1 small onion, thinly sliced, 5 curry leaves and stir. Add 1 Tbsp. coriander powder,", 
+            "4":"1 Tbsp. Kashmiri red chili powder, 1 tsp. turmeric powder and stir to combine. Add 1 large tomato, chopped, 1 small eggplant, cut into 2-inch pieces, 1 medium potato, peeled and cut into 2-inch pieces and stir to combine. Sprinkle 2 Tbsp. sambar masala (like MDH or Everest) and stir to combine.", 
+            "5":"Pour in cooked dal, 1 ½ cup water, and mix to combine. Bring to a boil, then turn to low and simmer until tomato is broken down, potatoes and eggplant are tender, about 25 minutes. Add tamarind water and stir to combine. Check for seasoning and adjust salt. Remove from heat and make tadka.", 
+            "6":"Heat 2 Tbsp. vegetable oil in a small saucepan over medium-high. Add ¼ tsp. asafoetida or hing, 1 tsp. Kashmiri red chili powder, 5 curry leaves, 5 dried red chilis and cook until curry leaves splutter, 10 seconds. Remove from heat immediately and pour over sambar.", 
+            "7":"Garnish sambar with cilantro and serve immediately."
+           
+         },
+         "servingsize": "4",
+         "cuisine": "",
+         "state": "Tamilnadu",
+         "image": "",
+         "meal": "biriyani",
+          "source":"",
+         "source link": "",
+         "notes": "Sambhar can be made with a combination of many vegetables.Examples are squash, pumpkin, drumstick, zuchini, carrot, okra, brinjal(eggplant), bottle gourd, sweet potato, french beans, and many more"
     }
 
 }
