@@ -5,6 +5,7 @@
         "subname": "pressure cooker method",
         "EnglishName":"Lentil Soup with Vegetables",
         "img": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Pumpkin_sambar.JPG",
+        "main_ingredient":[ "lentil"],
         "ingredient": {"Onions": "4 chopped",
     "Tamarind": "4 chopped",
     "Tomatoes": "4 chopped",
@@ -38,6 +39,7 @@
         "subname": "with pepper",
         "EnglishName":"Spicy South Indian Soup",
         "img": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Rasam.JPG",
+        "main_ingredient":[ "beef"],
         "ingredient": {
 
         },
@@ -66,7 +68,7 @@
         "subname": "From Ambur in Vellore district",
         "EnglishName":"Flavored rice with meat",
         "img": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Pumpkin_sambar.JPG",
-        "main_ingredient": "chicken",
+        "main_ingredient":[ "chicken"],
         "ingredient": {"Onions": "4 chopped",
     "Tamarind": "4 chopped",
     "Tomatoes": "4 chopped",

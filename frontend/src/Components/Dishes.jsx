@@ -8,8 +8,9 @@ export const Dishes = () => {
 
   const id = useParams().id
   const location = useLocation()
-  const { myState, myMeal } = location.state
+  const { myState, myMeal, myIngredient } = location.state
 
+  console.log(myState)
   const [data, setData] = useState(null)
 
   useEffect(() => {
@@ -22,6 +23,14 @@ export const Dishes = () => {
   if (!data) {
     return <div>Loading...</div>
   }
+
+  let dishByIngredient = Object.values(data).filter(item => item.main_ingredient.includes(myIngredient)).sort(function (a, b) {
+    if (a.name < b.name) { return -1; }
+    if (a.name > b.name) { return 1; }
+    return 0;
+  })
+
+ 
   let dishByState = Object.values(data).filter(item => item.state === myState && item.meal === myMeal).sort(function (a, b) {
     if (a.name < b.name) { return -1; }
     if (a.name > b.name) { return 1; }
@@ -41,18 +50,24 @@ export const Dishes = () => {
     if (word == "sweet") return "Sweets and Desserts"
   }
 
-  if (dishByState.length === 0) {
-
+  if (myMeal !== "notexisting"&& myState !== "notexisting" && dishByState.length === 0) {
     return (
       <div className="flex flex-col min-h-screen bg-gray-100">
         <div className="max-container text-2xl font-semibold mt-10"><h1>{plural(myMeal)} from {myState}</h1></div>
         <div className='max-container flex  flex-col  my-10'>{`There is currently no ${myMeal} dishes listed in ${myState}. We are regularly adding more recipes. Please check back later. If you have a recipe to share, please head to the submit recipe tab and add your recipe for review`} </div>
       </div>
-
+     
     )
   }
 
-
+  if(myIngredient && dishByIngredient.length !== 0 ) {
+    return (
+    <div className="flex flex-col min-h-screen bg-gray-100">
+    <div className="max-container text-2xl font-semibold mt-10"><h1>{myIngredient} dishes</h1></div>
+    <div className='max-container flex  flex-col  my-10'>{`There is currently no ${myMeal} dishes listed in ${myState}. We are regularly adding more recipes. Please check back later. If you have a recipe to share, please head to the submit recipe tab and add your recipe for review`} </div>
+  </div>
+    )
+  }
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-100">
