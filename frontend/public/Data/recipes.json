@@ -95,6 +95,37 @@
           "source":"",
          "source link": "",
          "notes": "Sambhar can be made with a combination of many vegetables.Examples are squash, pumpkin, drumstick, zuchini, carrot, okra, brinjal(eggplant), bottle gourd, sweet potato, french beans, and many more"
+    },
+    "Chettinad Masala": {
+        "id": 4,
+        "name": "Chettinad Masala",
+        "subname": "Chetttiad spice that go in dishes",
+        "EnglishName":"A blend of flavorful spices",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Pumpkin_sambar.JPG",
+        "main_ingredient":[ ""],
+        "ingredient": {"Cinnamon":1,
+    "Cardamom": 4,
+    "Cloves":7,
+    "Star anise": 2,
+    "Kalpasi": 3,
+    "Peppercorns": "1 tbsp",
+    "Jeera": "1 tbsp",
+    "Fennel seeds": "2 tbsp",
+    "Coriander seeds": "3 tbsp",
+    "Red chillies": 8,
+    "Curry leaves": "small handful"
+       },
+        "steps": {
+            "1":"Dry roast the ingredients in medium flame and grind them"
+         },
+         "servingsize": "4",
+         "cuisine": "Chettinad",
+         "state": "Tamilnadu",
+         "meal": "spice",
+          "source":"Arun's Recipes",
+         "source link": "https://www.youtube.com/watch?v=qFKD1fatEMI",
+         "notes": "This spice powder can be used for a variety of Chettinad dishes to enhance the flavor"
     }
+
 
 }

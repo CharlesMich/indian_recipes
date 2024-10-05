@@ -12,6 +12,9 @@ import {Home} from './Components/Home'
 import { Dishes } from './Components/Dishes';
 import { Recipe } from './Components/Recipe';
 import { MealTypeByState } from './Components/MealTypeByState';
+import { Contact } from './Components/Contact';
+import { About } from './Components/About';
+import { SubmitRecipe } from './Components/SubmitRecipe';
 
 
 function App() {
@@ -25,6 +28,9 @@ function App() {
       <Route path ='/' element = {<Home/>}></Route>
       <Route path ='/dishes/:id' element = {<Dishes/>}></Route>
       <Route path ='/recipe/:id' element = {<Recipe/>}></Route>
+      <Route path ='/contactus' element = {<Contact/>}></Route>
+      <Route path ='/aboutus' element = {<About/>}></Route>
+      <Route path ='/submitresume' element = {<SubmitRecipe/>}></Route>
       {/* <Route path ='/' element = {<Home/>}></Route> */}
       </Routes>
     </div>
