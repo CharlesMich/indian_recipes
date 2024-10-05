@@ -7,7 +7,7 @@ export const Recipe = () => {
   const id = useParams().id
 
   const [data, setData] = useState(null)
- 
+ console.log(id)
   useEffect(()=> {
       fetch ('../Data/recipes.json')
       .then(response => response.json())
@@ -19,8 +19,8 @@ export const Recipe = () => {
     return <div>Loading...</div>
 }
 
- const recipe = Object.values(data).filter((item)=> item.id === id)
- 
+ const recipe = Object.values(data).filter((item)=> item.id == id)
+ console.log(recipe)
  function ingList(list) {
   let newArr = []
   for (const [key, value] of Object.entries(list)) {
