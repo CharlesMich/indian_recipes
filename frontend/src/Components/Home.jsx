@@ -31,7 +31,7 @@ export const Home = () => {
       <li className={activeTab === 3 ? 'active  text-coral-red cursor-pointer' : 'cursor-pointer'} onClick={() => handleTabClick(3)}>
        Vegetarian
       </li>
-      <li className={activeTab === 4 ? 'active  text-coral-red' : ''} onClick={() => handleTabClick(4)}>
+      <li className={activeTab === 4 ? 'active  text-coral-red cursor-pointer' : 'cursor-pointer'} onClick={() => handleTabClick(4)}>
        Non Vegetarian
       </li>
     </ul>

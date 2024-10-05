@@ -8,9 +8,9 @@ export const Dishes = () => {
 
   const id = useParams().id
   const location = useLocation()
-  const { myState, myMeal, myIngredient } = location.state
+  const { myState, myMeal, myIngredient, myCuisine } = location.state
 
-  console.log(myState, myMeal, myIngredient)
+  console.log(myState, myMeal, myIngredient, myCuisine)
   const [data, setData] = useState(null)
 
   useEffect(() => {
@@ -23,6 +23,13 @@ export const Dishes = () => {
   if (!data) {
     return <div>Loading...</div>
   }
+
+  let dishByCuisine = Object.values(data).filter(item => item.cuisine === myCuisine).sort(function (a, b) {
+    if (a.name < b.name) { return -1; }
+    if (a.name > b.name) { return 1; }
+    return 0;
+  })
+console.log(dishByCuisine)
 
   let dishByIngredient = Object.values(data).filter(item => item.main_ingredient.includes(myIngredient)).sort(function (a, b) {
     if (a.name < b.name) { return -1; }
@@ -42,7 +49,8 @@ export const Dishes = () => {
     if (a.name > b.name) { return 1; }
     return 0;
   })
-console.log(dishByMeal)
+
+
   function plural(word) {
     if (word == "appetizer") return "Appetizers"
     if (word == "curry") return "Curries"
@@ -61,7 +69,32 @@ console.log(dishByMeal)
   }
 
   console.log(capitalizeFirstLetter("biriyani"))
-// this option is when there are no dishes for the state and meal type
+
+  // there are no dishes for the cuisine
+  if(myCuisine !== "notexisting" && myMeal === "notexisting" && myState === "notexisting" && myIngredient === "notexisting" &&  dishByCuisine.length === 0 ) {
+    return (
+    <div className="flex flex-col min-h-screen bg-gray-100">
+    <div className="max-container text-2xl font-semibold mt-10"><h1>{capitalizeFirstLetter(myCuisine)} dishes</h1></div>
+    <div className='max-container flex  flex-col  my-10'>{`There is currently no ${myCuisine} dishes listed. We are regularly adding more recipes. Please check back later. If you have a recipe to share, please head to the submit recipe tab and add your recipe for review`} </div>
+  </div>
+    )
+  }
+
+  // there are dishes for the cuisine
+  if(myCuisine !== "notexisting" && myMeal === "notexisting" && myState === "notexisting" && myIngredient === "notexisting" &&  dishByCuisine.length !== 0 ) {
+    return (
+    <div className="flex flex-col min-h-screen bg-gray-100">
+    <div className="max-container text-2xl font-semibold mt-10"><h1>{capitalizeFirstLetter(myCuisine)} dishes</h1></div>
+    <div className="max-container flex  flex-col justify-start flex-wrap gap-2 my-10">{dishByCuisine.map((item) => (
+        <Link to={`/recipe/${item.id}`} key={item.id}><div>{item.name}, ({item.subname})</div></Link>
+      ))}
+
+      </div>
+  </div>
+    )
+  }
+
+// there are no dishes for the state and meal type
   if (myMeal !== "notexisting" && myState !== "notexisting" && dishByState.length === 0) {
     return (
       <div className="flex flex-col min-h-screen bg-gray-100">
