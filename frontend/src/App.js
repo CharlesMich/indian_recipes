@@ -19,6 +19,8 @@ function App() {
   return (
     
     <div className="flex flex-col bg-gray-100 justify-between min-h-screen">
+      <div>
+
     <Navigation/>
       <Routes>
       <Route path ='/state/mealtype/:id' element = {<MealTypeByState/>}></Route>
@@ -31,6 +33,8 @@ function App() {
       <Route path ='/submitresume' element = {<SubmitRecipe/>}></Route>
       {/* <Route path ='/' element = {<Home/>}></Route> */}
       </Routes>
+      </div>
+     
       <Footer/>
     </div>
     

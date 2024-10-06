@@ -73,7 +73,7 @@ console.log(dishByCuisine)
   // there are no dishes for the cuisine
   if(myCuisine !== "notexisting" && myMeal === "notexisting" && myState === "notexisting" && myIngredient === "notexisting" &&  dishByCuisine.length === 0 ) {
     return (
-    <div className="flex flex-col min-h-screen bg-gray-100">
+    <div className="flex flex-col bg-gray-100">
     <div className="max-container text-2xl font-semibold mt-10"><h1>{capitalizeFirstLetter(myCuisine)} dishes</h1></div>
     <div className='max-container flex  flex-col  my-10'>{`There is currently no ${myCuisine} dishes listed. We are regularly adding more recipes. Please check back later. If you have a recipe to share, please head to the submit recipe tab and add your recipe for review`} </div>
   </div>
@@ -83,7 +83,7 @@ console.log(dishByCuisine)
   // there are dishes for the cuisine
   if(myCuisine !== "notexisting" && myMeal === "notexisting" && myState === "notexisting" && myIngredient === "notexisting" &&  dishByCuisine.length !== 0 ) {
     return (
-    <div className="flex flex-col min-h-screen bg-gray-100">
+    <div className="flex flex-col bg-gray-100">
     <div className="max-container text-2xl font-semibold mt-10"><h1>{capitalizeFirstLetter(myCuisine)} dishes</h1></div>
     <div className="max-container flex  flex-col justify-start flex-wrap gap-2 my-10">{dishByCuisine.map((item) => (
         <Link to={`/recipe/${item.id}`} key={item.id}><div>{item.name}, ({item.subname})</div></Link>
@@ -97,7 +97,7 @@ console.log(dishByCuisine)
 // there are no dishes for the state and meal type
   if (myMeal !== "notexisting" && myState !== "notexisting" && dishByState.length === 0) {
     return (
-      <div className="flex flex-col min-h-screen bg-gray-100">
+      <div className="flex flex-col bg-gray-100">
         <div className="max-container text-2xl font-semibold mt-10"><h1>{plural(myMeal)} from {myState}</h1></div>
         <div className='max-container flex  flex-col  my-10'>{`There is currently no ${myMeal} dishes listed in ${myState}. We are regularly adding more recipes. Please check back later. If you have a recipe to share, please head to the submit recipe tab and add your recipe for review`} </div>
       </div>
@@ -108,7 +108,7 @@ console.log(dishByCuisine)
   // No dishes for the meal type
   if(myMeal !== "notexisting" && myState === "notexisting" &&  dishByMeal.length === 0 ) {
     return (
-    <div className="flex flex-col min-h-screen bg-gray-100">
+    <div className="flex flex-col bg-gray-100">
     <div className="max-container text-2xl font-semibold mt-10"><h1>{capitalizeFirstLetter(myMeal)} dishes</h1></div>
     <div className='max-container flex  flex-col  my-10'>{`There is currently no ${myMeal} dishes listed. We are regularly adding more recipes. Please check back later. If you have a recipe to share, please head to the submit recipe tab and add your recipe for review`} </div>
   </div>
@@ -117,7 +117,7 @@ console.log(dishByCuisine)
 // no dishes for the ingredient
   if(myIngredient !=="notexisting" &&  myMeal === "notexisting" && myState === "notexisting" && dishByIngredient.length === 0 ) {
     return (
-    <div className="flex flex-col min-h-screen bg-gray-100">
+    <div className="flex flex-col bg-gray-100">
     <div className="max-container text-2xl font-semibold mt-10"><h1>{capitalizeFirstLetter(myIngredient)} dishs</h1></div>
     <div className='max-container flex  flex-col  my-10'>{`There is currently no ${myIngredient} dishes listed. We are regularly adding more recipes. Please check back later. If you have a recipe to share, please head to the submit recipe tab and add your recipe for review`} </div>
   </div>
@@ -127,7 +127,7 @@ console.log(dishByCuisine)
   //  when there are dishes for the ingredient
   if(myIngredient !=="notexisting" && dishByIngredient.length !== 0 ) {
     return (
-    <div className="flex flex-col min-h-screen bg-gray-100">
+    <div className="flex flex-col bg-gray-100">
     <div className="max-container text-2xl font-semibold mt-10"><h1>{capitalizeFirstLetter(myIngredient)} dishes</h1></div>
     <div className="max-container flex  flex-col justify-start flex-wrap gap-2 my-10">{dishByIngredient.map((item) => (
         <Link to={`/recipe/${item.id}`} key={item.id}><div>{item.name}, ({item.subname})</div></Link>
@@ -141,7 +141,7 @@ console.log(dishByCuisine)
   // when there are dishes for the meal type
   if(myMeal !=="notexisting" && myState === "notexisting" &&  dishByMeal.length !== 0 ) {
     return (
-    <div className="flex flex-col min-h-screen bg-gray-100">
+    <div className="flex flex-col bg-gray-100">
     <div className="max-container text-2xl font-semibold mt-10"><h1>{capitalizeFirstLetter(myMeal)} dishes</h1></div>
     <div className="max-container flex  flex-col justify-start flex-wrap gap-2 my-10">{dishByMeal.map((item) => (
         <Link to={`/recipe/${item.id}`} key={item.id}><div>{item.name}, ({item.subname})</div></Link>
@@ -155,7 +155,7 @@ console.log(dishByCuisine)
   // this option is when there are dishes in the state and meal type
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-100">
+    <div className="flex flex-col bg-gray-100">
       <div className="max-container text-2xl font-semibold mt-10"><h1>{plural(myMeal)} from {myState}</h1></div>
       <div className="max-container flex  flex-col justify-start flex-wrap gap-2 my-10">{dishByState.map((item) => (
         <Link to={`/recipe/${item.id}`} key={item.id}><div>{item.name}, ({item.subname})</div></Link>

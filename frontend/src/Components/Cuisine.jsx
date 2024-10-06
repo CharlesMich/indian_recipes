@@ -10,7 +10,7 @@ export const Cuisine = () => {
     }
 
       return (
-       <div className="flex flex-col min-h-screen justify-between bg-gray-100">
+       <div className="flex flex-col bg-gray-100">
         {/* <section className="max-container flex justify-center flex-wrap gap-9 mb-10"> */}
        <div  className="max-container flex justify-center flex-wrap gap-9 my-10">{cuisines.map((item, idx)=> (
         <Link to={`/dishes/${idx}`} state={{myMeal: "notexisting", myState: "notexisting", myIngredient: "notexisting", myCuisine:item.name }} key={idx}> <div className="flex sm:w-[300px] 
