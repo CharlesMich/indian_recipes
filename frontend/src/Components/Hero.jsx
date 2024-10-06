@@ -6,9 +6,11 @@ import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
-    <div className="flex flex-col min-h-screen justify-between  bg-gray-100 max-container">
+    <div className="flex flex-col min-h-screen justify-between bg-gray-100">
 
+   
    <Carousel1/>
+   
     <div className='max-container flex flex-row flex-wrap gap-5 justify-center mt-10'>
     <Link to ={`/home/${0}`}><PhotoCard img="../../Images/state_hero_img.jpg" title={"Browse by States"}/></Link>
     <Link to ={`/home/${1}`}><PhotoCard img="../../Images/state_hero_img.jpg" title={"Browse by Cuisine"}/></Link>

@@ -1,12 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import {useEffect, useState} from 'react'
 import { Route, Routes } from "react-router-dom";
-import {State }from './Components/State'
-import {Cuisine} from './Components/Cuisine'
-import {Ingredient} from './Components/Ingredient'
-import {Meal} from './Components/Meal'
-import {VegNonVeg} from './Components/VegNonVeg'
 import { Navigation } from './Components/Navigation';
 import {Home} from './Components/Home'
 import { Dishes } from './Components/Dishes';
@@ -16,14 +9,17 @@ import { Contact } from './Components/Contact';
 import { About } from './Components/About';
 import { SubmitRecipe } from './Components/SubmitRecipe';
 import { Hero } from './Components/Hero';
+import { Footer } from './Components/Footer';
+
 
 
 function App() {
  
   
   return (
-    <div className=" bg-gray-100">
-      <Navigation/>
+    
+    <div className="flex flex-col bg-gray-100 justify-between min-h-screen">
+    <Navigation/>
       <Routes>
       <Route path ='/state/mealtype/:id' element = {<MealTypeByState/>}></Route>
       <Route path ='/' element = {<Hero/>}></Route>
@@ -35,7 +31,9 @@ function App() {
       <Route path ='/submitresume' element = {<SubmitRecipe/>}></Route>
       {/* <Route path ='/' element = {<Home/>}></Route> */}
       </Routes>
+      <Footer/>
     </div>
+    
   );
 }
 

@@ -46,7 +46,7 @@ export const Navigation = () => {
 
 
   return (
-    <nav className="sticky top-0 w-full bg-white items-center flex justify-center p-4">
+    <nav className="sticky top-0 w-full bg-white items-center flex justify-center p-4 z-50">
       <div className="flex justify-between sm:justify-between items-center w-full flex-wrap lg:flex-nowrap max-container1">
         <a href="/"  className="flex items-center">
         <div><span className="self-center text-2xl md:text-3xl font-regular  font-sans whitespace-nowrap text-black">FLAVORFUL</span><span className="self-center text-2xl md:text-3xl font-regular font-serif whitespace-nowrap text-coral-red"> INDIA</span></div>
