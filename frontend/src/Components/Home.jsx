@@ -6,14 +6,22 @@ import {Ingredient} from './Ingredient'
 import {Meal} from './Meal'
 import {Veg} from './Veg'
 import { NonVegetarian } from './NonVegetarian'
+import { useParams } from 'react-router-dom'
 
 export const Home = () => {
 
     const [activeTab, setActiveTab] = useState(0);
+    const id = useParams().id
+    console.log(id)
 
+    console.log(activeTab)
   const handleTabClick = (index) => {
     setActiveTab(index);
   };
+
+  useEffect(() => {
+    setActiveTab(+id)
+  }, [])
 
   return (
     <div className="max-container bg-gray-100">

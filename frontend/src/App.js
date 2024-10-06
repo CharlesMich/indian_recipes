@@ -27,6 +27,7 @@ function App() {
       <Routes>
       <Route path ='/state/mealtype/:id' element = {<MealTypeByState/>}></Route>
       <Route path ='/' element = {<Hero/>}></Route>
+      <Route path='/home/:id' element ={<Home/>}></Route>
       <Route path ='/dishes/:id' element = {<Dishes/>}></Route>
       <Route path ='/recipe/:id' element = {<Recipe/>}></Route>
       <Route path ='/contactus' element = {<Contact/>}></Route>

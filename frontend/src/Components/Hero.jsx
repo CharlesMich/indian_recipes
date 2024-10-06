@@ -1,6 +1,7 @@
 import React from 'react'
 import { PhotoCard } from './PhotoCard'
 import { Carousel1 } from './Carousel'
+import { Link } from "react-router-dom";
 
 
 export const Hero = () => {
@@ -9,11 +10,11 @@ export const Hero = () => {
 
    <Carousel1/>
     <div className='max-container flex flex-row flex-wrap gap-5 justify-center mt-10'>
-    <PhotoCard img="../../Images/state_hero_img.jpg" title={"Browse by States"}/>
-   <PhotoCard img="../../Images/state_hero_img.jpg" title={"Browse by Cuisine"}/>
-   <PhotoCard img="../../Images/state_hero_img.jpg" title={"Browse by Meal type"}/>
-   <PhotoCard img="../../Images/state_hero_img.jpg" title={"Browse Vegetarian recipes"}/>
-   <PhotoCard img="../../Images/state_hero_img.jpg" title={"Browse Non veg Recipes"}/>
+    <Link to ={`/home/${0}`}><PhotoCard img="../../Images/state_hero_img.jpg" title={"Browse by States"}/></Link>
+    <Link to ={`/home/${1}`}><PhotoCard img="../../Images/state_hero_img.jpg" title={"Browse by Cuisine"}/></Link>
+    <Link to ={`/home/${2}`}><PhotoCard img="../../Images/state_hero_img.jpg" title={"Browse by Meal type"}/></Link>
+    <Link to ={`/home/${3}`}><PhotoCard img="../../Images/state_hero_img.jpg" title={"Browse Vegetarian recipes"}/></Link>
+    <Link to ={`/home/${4}`}><PhotoCard img="../../Images/state_hero_img.jpg" title={"Browse Non veg Recipes"}/></Link>
     </div>
     </div>
   )
