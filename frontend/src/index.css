@@ -35,5 +35,10 @@ code {
     max-width: 1200px;
     margin: 0 auto;
   }
+
+  .max-container2 {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
 }
 
