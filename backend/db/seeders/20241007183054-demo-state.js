@@ -178,7 +178,7 @@ module.exports = {
     const Op = Sequelize.Op;
 
     return queryInterface.bulkDelete(options, 
-      {name: {[Op.in]: []}},
+    null,
       {});
     /**
      * Add commands to revert seed here.

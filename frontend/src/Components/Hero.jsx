@@ -2,6 +2,7 @@ import React from 'react'
 import { PhotoCard } from './PhotoCard'
 import { Carousel1 } from './Carousel'
 import { Link } from "react-router-dom";
+import { Review } from './Review';
 
 
 export const Hero = () => {
@@ -18,6 +19,7 @@ export const Hero = () => {
     <Link to ={`/home/${3}`}><PhotoCard img="../../Images/state_hero_img.jpg" title={"Browse Vegetarian recipes"}/></Link>
     <Link to ={`/home/${4}`}><PhotoCard img="../../Images/state_hero_img.jpg" title={"Browse Non veg Recipes"}/></Link>
     </div>
+    <Review/>
     </div>
   )
 }
