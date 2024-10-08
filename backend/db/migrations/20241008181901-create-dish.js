@@ -38,6 +38,9 @@ module.exports = {
       state_id: {
         type: Sequelize.INTEGER
       },
+      contributor_id: {
+        type: Sequelize.INTEGER
+      },
       meal: {
         type: Sequelize.STRING
       },

@@ -1,7 +1,9 @@
 'use strict';
+
 const {
   Model
 } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
   class Dish extends Model {
     /**
@@ -10,7 +12,14 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+     Dish.hasMany(
+      models.Ingredient,
+      {foreignKey: "dish_id"}
+     ),
+     Dish.belongsTo(
+      models.Contributor,
+      { foreignKey: 'contributor_id' }
+    )
     }
   }
   Dish.init({
@@ -21,6 +30,7 @@ module.exports = (sequelize, DataTypes) => {
     serving_size: DataTypes.INTEGER,
     cuisine_id: DataTypes.INTEGER,
     state_id: DataTypes.INTEGER,
+    contributor_id:  DataTypes.INTEGER,
     meal: DataTypes.STRING,
     notes: DataTypes.STRING
   }, {

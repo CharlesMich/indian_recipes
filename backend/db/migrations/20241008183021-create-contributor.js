@@ -37,9 +37,6 @@ module.exports = {
       youtube: {
         type: Sequelize.STRING
       },
-      dish_id: {
-        type: Sequelize.INTEGER
-      },
       email: {
         type: Sequelize.STRING
       },

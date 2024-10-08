@@ -2,6 +2,8 @@
 const {
   Model
 } = require('sequelize');
+
+
 module.exports = (sequelize, DataTypes) => {
   class Contributor extends Model {
     /**
@@ -10,7 +12,10 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Contributor.hasMany(
+        models.Dish,
+        {foreignKey: 'contributor_id'}
+       )
     }
   }
   Contributor.init({
@@ -21,7 +26,6 @@ module.exports = (sequelize, DataTypes) => {
     website: DataTypes.STRING,
     social: DataTypes.STRING,
     youtube: DataTypes.STRING,
-    dish_id: DataTypes.INTEGER,
     email: DataTypes.STRING
   }, {
     sequelize,
