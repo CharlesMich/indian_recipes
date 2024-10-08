@@ -16,9 +16,7 @@ export const State = () => {
   useEffect(() => {
   dispatch(fetchAllStates())
   }, [dispatch])
-
-  console.log(states)
-    
+  
     if (!states) {
       return <div>Loading...</div>
     }

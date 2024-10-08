@@ -1,9 +1,17 @@
 import React from 'react'
+import {useEffect, useState} from 'react'
+import { useDispatch, useSelector } from "react-redux"
 import { Link } from "react-router-dom";
 import cuisines from '../Constants/cuisine'
+import { fetchAllCuisines } from '../Store/cuisine'
 
 export const Cuisine = () => {
-   
+  const dispatch = useDispatch()
+  const cuisines = useSelector(state => Object.values(state.cuisines))
+
+  useEffect(() => {
+    dispatch(fetchAllCuisines())
+    }, [dispatch])
    
     if (!cuisines) {
       return <div>Loading...</div>
