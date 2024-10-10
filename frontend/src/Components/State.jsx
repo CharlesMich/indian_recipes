@@ -12,6 +12,7 @@ export const State = () => {
   const dispatch = useDispatch()
 
   const states = useSelector(state => Object.values(state.states))
+  
 
   useEffect(() => {
   dispatch(fetchAllStates())
@@ -25,7 +26,7 @@ export const State = () => {
        <div className="flex flex-col bg-gray-100">
         {/* <section className="max-container flex justify-center flex-wrap gap-9 mb-10"> */}
        <div  className="max-container flex justify-center flex-wrap gap-9 my-10">{states.map((item, idx)=> (
-         <Link to={`/state/mealtype/${idx}`} state={{myState: item.name}} key={idx}>
+         <Link to={`/state/mealtype/${item.id}`} state={{myState: item.name}} key={idx}>
           <div className="flex sm:w-[300px] 
                   sm:min-w-[200px] w-full rounded-
                   [20px] shadow-3xl px-5 py-5 bg-white">

@@ -3,11 +3,15 @@ import {thunk} from "redux-thunk";
 import sessionReducer from "./session";
 import stateReducer from "./state";
 import cuisineReducer from "./cuisine";
+import recipeReducer from "./recipe";
+import dishReducer from "./dish";
 
 const rootReducer = combineReducers({
     session: sessionReducer,
     states: stateReducer,
-    cuisines: cuisineReducer
+    cuisines: cuisineReducer,
+    myRecipe: recipeReducer,
+    myDishes: dishReducer
 })
 
 let enhancer;
