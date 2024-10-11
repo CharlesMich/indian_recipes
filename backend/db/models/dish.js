@@ -19,7 +19,12 @@ module.exports = (sequelize, DataTypes) => {
      Dish.belongsTo(
       models.Contributor,
       { foreignKey: 'contributor_id' }
+    ),
+    Dish.belongsTo(
+      models.Meal,
+      {foreignKey: 'meal_id'}
     )
+
     }
   }
   Dish.init({
@@ -31,7 +36,7 @@ module.exports = (sequelize, DataTypes) => {
     cuisine_id: DataTypes.INTEGER,
     state_id: DataTypes.INTEGER,
     contributor_id:  DataTypes.INTEGER,
-    meal: DataTypes.STRING,
+    meal_id: DataTypes.INTEGER,
     notes: DataTypes.STRING
   }, {
     sequelize,

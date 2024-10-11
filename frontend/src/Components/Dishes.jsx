@@ -175,9 +175,30 @@ export const Dishes = () => {
   // </div>
   //   )
   // }
+  console.log(stateId === "notexisting" && myMeal === "notexisting" && dishes.length === 0)
+  // this option is when there are no dishes in the cuisine type
+  if(stateId === "notexisting" && myMeal === "notexisting" && dishes.length === 0 ){
+    return(
+<>
+    <div className="max-container2 text-2xl font-semibold mt-10"><h1>Dishes from {myCuisine}</h1></div>
+    <div className='max-container2 flex  flex-col  my-10'>{`There is currently no  dishes listed in ${myCuisine}. We are regularly adding more recipes. Please check back later. If you have a recipe to share, please head to the submit recipe tab and add your recipe for review`} </div>
+    </>
+    )
+    
+  }
 
-  // this option is when there are dishes in the state and meal type
-
+  if(stateId === "notexisting" && myMeal === "notexisting" && dishes.length !== 0){
+    return (
+      <>
+        <div className="max-container2 text-2xl font-semibold mt-10"><h1>{plural(myMeal)} from {myState}</h1></div>
+        <div className="max-container2 flex  flex-col justify-start flex-wrap gap-2 my-10">{dishes.map((item) => (
+          <Link to={`/recipe/${item.id}`} key={item.id}><div>{item.name}, ({item.subname})</div></Link>
+        ))}
+  
+        </div>
+      </>
+    )
+  }
 
 
   if(myCuisine === "notexisting" && dishes.length === 0){
