@@ -41,8 +41,8 @@ module.exports = {
       contributor_id: {
         type: Sequelize.INTEGER
       },
-      meal: {
-        type: Sequelize.STRING
+      meal_id: {
+        type: Sequelize.INTEGER
       },
       notes: {
         type: Sequelize.STRING

@@ -21,7 +21,7 @@ module.exports = {
         cuisine_id: 1,
         state_id:32,
         contributor_id: 2,
-        meal: "biriyani",
+        meal_id: 4,
         notes: "Biriyani from tamilnadu often contains coconut milk and coconut oil",
 
     }
