@@ -13,12 +13,12 @@ export const Dishes = () => {
   
   const id = useParams().id
   const location = useLocation()
-  const {stateId, myState , myMeal, myIngredient, myCuisine } = location.state
+  const {stateId, myState , myMeal, mealName, myIngredient, myCuisine, cuisineName } = location.state
+
+  console.log(stateId, myState , myMeal, mealName, myIngredient, myCuisine, cuisineName)
   
   const dishes = useSelector(state => Object.values(state.myDishes))
-  console.log(dishes)
-
-  console.log(stateId,  myState, myMeal, myIngredient, myCuisine)
+  
 
   let params = new URLSearchParams({
     'stateid': stateId,
@@ -175,22 +175,24 @@ export const Dishes = () => {
   // </div>
   //   )
   // }
-  console.log(stateId === "notexisting" && myMeal === "notexisting" && dishes.length === 0)
+  
+  // CUISINE => DISHES
   // this option is when there are no dishes in the cuisine type
   if(stateId === "notexisting" && myMeal === "notexisting" && dishes.length === 0 ){
     return(
 <>
-    <div className="max-container2 text-2xl font-semibold mt-10"><h1>Dishes from {myCuisine}</h1></div>
-    <div className='max-container2 flex  flex-col  my-10'>{`There is currently no  dishes listed in ${myCuisine}. We are regularly adding more recipes. Please check back later. If you have a recipe to share, please head to the submit recipe tab and add your recipe for review`} </div>
+    <div className="max-container2 text-2xl font-semibold mt-10"><h1>Dishes from {cuisineName} cuisine</h1></div>
+    <div className='max-container2 flex  flex-col  my-10'>{`There is currently no  dishes listed in ${cuisineName}. We are regularly adding more recipes. Please check back later. If you have a recipe to share, please head to the submit recipe tab and add your recipe for review`} </div>
     </>
     )
     
   }
-
+// CUISINE => DISHES
+// this option is when there are dishes in the cuisine type
   if(stateId === "notexisting" && myMeal === "notexisting" && dishes.length !== 0){
     return (
       <>
-        <div className="max-container2 text-2xl font-semibold mt-10"><h1>{plural(myMeal)} from {myState}</h1></div>
+        <div className="max-container2 text-2xl font-semibold mt-10"><h1>Dishes from {cuisineName} cuisine</h1></div>
         <div className="max-container2 flex  flex-col justify-start flex-wrap gap-2 my-10">{dishes.map((item) => (
           <Link to={`/recipe/${item.id}`} key={item.id}><div>{item.name}, ({item.subname})</div></Link>
         ))}
@@ -200,16 +202,17 @@ export const Dishes = () => {
     )
   }
 
-
+// STATE => MEALTYPEBYSTATE => DISHES
   if(myCuisine === "notexisting" && dishes.length === 0){
     return (
       <>
-      <div className="max-container2 text-2xl font-semibold mt-10"><h1>{plural(myMeal)} from {myState}</h1></div>
-      <div className='max-container2 flex  flex-col  my-10'>{`There is currently no ${myMeal} dishes listed in ${myState}. We are regularly adding more recipes. Please check back later. If you have a recipe to share, please head to the submit recipe tab and add your recipe for review`} </div>
+      <div className="max-container2 text-2xl font-semibold mt-10"><h1>{plural(mealName)} from {myState}</h1></div>
+      <div className='max-container2 flex  flex-col  my-10'>{`There is currently no ${mealName} dishes listed in ${myState}. We are regularly adding more recipes. Please check back later. If you have a recipe to share, please head to the submit recipe tab and add your recipe for review`} </div>
       </>
     )
   }
 
+// STATE => MEALTYPEBYSTATE => DISHES 
 if(myCuisine === "notexisting" && dishes.length !== 0){
   return (
     <>

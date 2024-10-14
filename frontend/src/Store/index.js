@@ -5,13 +5,16 @@ import stateReducer from "./state";
 import cuisineReducer from "./cuisine";
 import recipeReducer from "./recipe";
 import dishReducer from "./dish";
+import mealReducer from "./meal";
+
 
 const rootReducer = combineReducers({
     session: sessionReducer,
-    states: stateReducer,
+    myStates: stateReducer,
     cuisines: cuisineReducer,
     myRecipe: recipeReducer,
-    myDishes: dishReducer
+    myDishes: dishReducer,
+    myMeals: mealReducer
 })
 
 let enhancer;

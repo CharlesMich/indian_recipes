@@ -11,7 +11,7 @@ import { fetchAllStates } from '../Store/state';
 export const State = () => {
   const dispatch = useDispatch()
 
-  const states = useSelector(state => Object.values(state.states))
+  const states = useSelector(state => Object.values(state.myStates))
   
 
   useEffect(() => {

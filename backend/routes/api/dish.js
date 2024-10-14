@@ -24,7 +24,7 @@ router.get('/', async(req, res, next)=> {
       if(cuisineid === "notexisting"){
         console.log('inside stateid && mealid')
         dishes = await Dish.findAll({
-            where: { meal: mealid, state_id: stateid }
+            where: { meal_id: mealid, state_id: stateid }
         })
     } else if(stateid === "notexisting" && mealid === "notexisting"){
         console.log('inside cuisineid')

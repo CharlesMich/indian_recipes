@@ -8,7 +8,6 @@ export const Meal = () => {
     if (!meal) {
       return <div>Loading...</div>
     }
-
       return (
        <div className="flex flex-col  bg-gray-100">
          
