@@ -18,6 +18,7 @@ export const DishesByMeal = () => {
         'stateid': 'none',
         'cuisineid': 'none',
         'mealid': mealId,
+         'myIngredient': "none"
       })
 
       useEffect(()=> {

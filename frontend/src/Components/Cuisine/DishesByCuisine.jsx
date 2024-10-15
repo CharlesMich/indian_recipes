@@ -20,6 +20,7 @@ export const DishesByCuisine = () => {
         'stateid': 'none',
         'cuisineid': cuisineId,
         'mealid': mealId,
+        'myIngredient': "none"
       })
 
       // console.log(Object.fromEntries(params))

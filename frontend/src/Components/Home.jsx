@@ -4,8 +4,8 @@ import {State }from './State/State'
 import {Cuisine} from './Cuisine/Cuisine'
 import {Ingredient} from './Ingredient'
 import {Meal} from './Meal/Meal'
-import {Veg} from './Veg'
-import { NonVegetarian } from './NonVegetarian'
+import {Veg} from './Veg/Veg'
+import { NonVegetarian } from './NonVeg/NonVegetarian'
 import { useParams } from 'react-router-dom'
 
 export const Home = () => {

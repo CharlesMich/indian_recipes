@@ -63,6 +63,11 @@ const vegetarian = [
         id: 13,
         img: "../../Images/bellpepper.png",
         veg: "bell pepper (capsicum)"
+    },
+    {
+        id: 13,
+        img: "../../Images/bellpepper.png",
+        veg: "chicken"
     }
 ]
 

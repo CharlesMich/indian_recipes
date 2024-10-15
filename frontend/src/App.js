@@ -15,12 +15,11 @@ import { DishesByState } from './Components/State/DishesByState';
 import { MealTypeByCuisine } from './Components/Cuisine/MealTypeByCuisine';
 import { DishesByCuisine } from './Components/Cuisine/DishesByCuisine';
 import { DishesByMeal } from './Components/Meal/DishesByMeal';
-
-
+import { DishByVeg } from './Components/Veg/DishByVeg';
+import { DishByNonVeg } from './Components/NonVeg/DishByNonVeg';
 
 function App() {
  
-  
   return (
     
     <div className="flex flex-col bg-gray-100 justify-between min-h-screen">
@@ -34,6 +33,8 @@ function App() {
       <Route path='/dishesbystate/:id' element = {<DishesByState/>}></Route>
       <Route path='/dishesbycuisine/:id' element = {<DishesByCuisine/>}></Route>
       <Route path='/dishesbymeal/:id' element = {<DishesByMeal/>}></Route>
+      <Route path='/dishbyveg/:id' element={<DishByVeg/>}></Route>
+      <Route path='/dishbynonveg/:id' element={<DishByNonVeg/>}></Route>
       <Route path ='/recipe/:id' element = {<Recipe/>}></Route>
       <Route path ='/meal/:id' element = {<Meal/>}></Route>
       <Route path='/state/meal/:id' element = {<MealTypeByState/>}></Route>
