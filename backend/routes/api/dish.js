@@ -19,21 +19,28 @@ router.get('/', async(req, res, next)=> {
         const stateid = req.query.stateid 
        const mealid =  req.query.mealid
        const cuisineid = req.query.cuisineid
-    console.log(stateid, mealid, cuisineid)
-      let dishes;
-      if(cuisineid === "notexisting"){
-        console.log('inside stateid && mealid')
+
+       let dishes;
+
+       if(stateid === "none" && cuisineid === "none") {
+        dishes = await Dish.findAll({
+            where: { meal_id: mealid }
+        })
+       }
+
+       if(stateid === "none" && cuisineid !== "none"){
+        console.log("..........1................")
+        dishes = await Dish.findAll({
+            where: { meal_id: mealid, cuisine_id: cuisineid }
+        })
+       } else if(cuisineid === "none" && stateid !== "none") {
+        console.log("..........2................")
         dishes = await Dish.findAll({
             where: { meal_id: mealid, state_id: stateid }
         })
-    } else if(stateid === "notexisting" && mealid === "notexisting"){
-        console.log('inside cuisineid')
-        dishes = await Dish.findAll({
-            where: {cuisine_id: cuisineid }
-        })
-      }  
+       }
+        return res.json(dishes)
        
-    return res.json(dishes)
 })
 // dishes by cuisine
 // dishes by ingredient

@@ -7,8 +7,9 @@ payload
 })
 
 export const fetchAllDishes = (params) => async dispatch => {
-    const response = await fetch(`/api/dish?${params}`)
    
+    const response = await fetch(`/api/dish?${params}`)
+    console.log((Object.fromEntries(params)))
     if(response.ok){
         const payload = await response.json();
         dispatch(load_dishes(payload))

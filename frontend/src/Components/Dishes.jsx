@@ -15,25 +15,23 @@ export const Dishes = () => {
   const location = useLocation()
   const {stateId, myState , myMeal, mealName, myIngredient, myCuisine, cuisineName } = location.state
 
-  console.log(stateId, myState , myMeal, mealName, myIngredient, myCuisine, cuisineName)
-  
   const dishes = useSelector(state => Object.values(state.myDishes))
   
-
   let params = new URLSearchParams({
-    'stateid': stateId,
+    'stateid': myState,
     'mealid': myMeal,
-    'cuisineid':myCuisine
+    'cuisineid':myCuisine 
   })
+  
   // if(myCuisine === "notexisting"){
-  //   console.log('inside params1')
+  // =
   //   params = new URLSearchParams({
   //     'stateid': stateId,
   //     'mealid': myMeal,
   //     'cuisineid':myCuisine
   //   })
   // } else  if(myMeal === "notexisting" && myState === "notexisting") {
-  //   console.log('inside params2')
+  //   
   //     params = new URLSearchParams({
   //     'stateid': 'notexisting',
   //     'mealid': 'notexisting',
@@ -41,7 +39,6 @@ export const Dishes = () => {
   //   })
   // }
 
-  console.log(params.stateid)
 
   useEffect(()=> {
     dispatch(fetchAllDishes(params))

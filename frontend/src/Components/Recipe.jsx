@@ -7,7 +7,7 @@ export const Recipe = () => {
   const id = useParams().id
 
   const [data, setData] = useState(null)
-  console.log(id)
+  
   useEffect(() => {
     fetch('../Data/recipes.json')
       .then(response => response.json())

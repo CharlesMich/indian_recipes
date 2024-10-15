@@ -1,9 +1,9 @@
 import React from 'react'
 import {useEffect, useState} from 'react'
-import {State }from './State'
-import {Cuisine} from './Cuisine'
+import {State }from './State/State'
+import {Cuisine} from './Cuisine/Cuisine'
 import {Ingredient} from './Ingredient'
-import {Meal} from './Meal'
+import {Meal} from './Meal/Meal'
 import {Veg} from './Veg'
 import { NonVegetarian } from './NonVegetarian'
 import { useParams } from 'react-router-dom'
@@ -12,9 +12,9 @@ export const Home = () => {
 
     const [activeTab, setActiveTab] = useState(0);
     const id = useParams().id
-    console.log(id)
+   
 
-    console.log(activeTab)
+    
   const handleTabClick = (index) => {
     setActiveTab(index);
   };
@@ -24,7 +24,7 @@ export const Home = () => {
   }, [])
 
   return (
-    <div className="max-container bg-gray-100">
+    <div className="max-container1 bg-gray-100">
     <ul className="tabs flex flex-row gap-10 mx-20 mt-20">
       <div className="font-semibold">Browse by</div>
       <li className={activeTab === 0 ? 'active text-coral-red cursor-pointer' : 'cursor-pointer'} onClick={() => handleTabClick(0)}>
