@@ -5,12 +5,7 @@ const { Dish , Ingredient} = require('../../db/models')
 
 const router = express.Router()
 
-// all dishes
-// router.get('/', async (req, res, next) => {
-//     let dishes = await Dish.findAll({
-//     })
-//     return res.json(dishes)
-// })
+
 
 
 

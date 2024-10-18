@@ -2,7 +2,6 @@ import React from 'react'
 import {useEffect, useState} from 'react'
 import { useDispatch, useSelector } from "react-redux"
 import { Link } from "react-router-dom";
-import states from '../../Constants/state'
 import { Home } from '../Home';
 import { fetchAllStates } from '../../Store/state';
 
