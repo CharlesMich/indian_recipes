@@ -1,9 +1,29 @@
 import React from 'react'
 import { useState } from 'react'
-import { NavLink } from "react-router-dom";
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { logout } from "../Store/session"
 
 
 export const Navigation = () => {
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const sessionUser = useSelector(state => state.session.user);
+
+  let user_id;
+  if (sessionUser) {
+    user_id = sessionUser.id
+  }
+
+  const handleLogout = (e) => {
+    e.preventDefault();
+    dispatch(logout());
+    setToggle(!toggle);
+    navigate('/')
+  };
+
   const [toggle, setToggle] = useState(false);
 
   const showNav = () => {
@@ -75,7 +95,9 @@ export const Navigation = () => {
             );
           })}
         </ul>
-
+        {user_id ? <button className={`${toggle ? " flex" : " hidden"
+          } text-gray mx-auto lg:mx-0 lg:flex lg:mt-0 items-center justify-center font-medium px-1 p-2 rounded-lg mt-3 w-full lg:w-24 border-b lg:pt-4 lg:border-none`} onClick={handleLogout} >Log Out</button> : <Link to='/admin' onClick={showNav} className={`${toggle ? " flex" : " hidden"
+            } text-gray mx-auto lg:mx-0 lg:flex lg:mt-0 items-center justify-center font-medium px-1 p-2 rounded-lg mt-3 w-full lg:w-24 border-b lg:pt-4 lg:border-none`}>LogIn</Link>}
       </div>
 
     </nav>

@@ -8,7 +8,7 @@ const { User } = require('../../db/models');
 const router = express.Router();
 
 const validateLogin = [
-  check('credential')
+  check('email')
     .exists({ checkFalsy: true })
     .notEmpty()
     .withMessage('Please provide a valid email or username.'),
@@ -18,18 +18,19 @@ const validateLogin = [
   handleValidationErrors
 ];
 
+// login
 router.post(
     '/',
     validateLogin,
     async (req, res, next) => {
-      const { credential, password } = req.body;
-     
+      const { email, password } = req.body;
+     console.log(email, password)
       const user = await User.unscoped().findOne({
-        where: {
-          [Op.or]: {
-            username: credential,
-            email: credential
-          }
+        where: { email: email
+          // [Op.or]: {
+          //   username: credential,
+          //   email: credential
+          // }
         }
       });
   
