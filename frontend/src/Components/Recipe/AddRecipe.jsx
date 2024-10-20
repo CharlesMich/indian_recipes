@@ -2,6 +2,6 @@ import React from 'react'
 
 export const AddRecipe = () => {
   return (
-    <div>AddRecipe</div>
+    <div>Add Recipe Form</div>
   )
 }
