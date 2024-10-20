@@ -17,7 +17,10 @@ import { DishesByCuisine } from './Components/Cuisine/DishesByCuisine';
 import { DishesByMeal } from './Components/Meal/DishesByMeal';
 import { DishByVeg } from './Components/Veg/DishByVeg';
 import { DishByNonVeg } from './Components/NonVeg/DishByNonVeg';
-import { Admin } from './Components/Admin';
+import { Admin } from './Components/Admin/Admin';
+import { Dashboard } from './Components/Admin/Dashboard';
+import { Contributor } from './Components/Contributors/Contributor';
+import { AddContributor } from './Components/Contributors/AddContributor';
 
 function App() {
  
@@ -44,6 +47,9 @@ function App() {
       <Route path ='/aboutus' element = {<About/>}></Route>
       <Route path ='/submitresume' element = {<SubmitRecipe/>}></Route>
       <Route path='/admin' element = {<Admin/>}></Route>
+      <Route path='/admin/dashboard' element={<Dashboard/>}></Route>
+      <Route path='/admin/dashboard/contributors' element={<Contributor/>}></Route>
+      <Route path='/admin/dashboard/addcontributor' element={<AddContributor/>}></Route>
       {/* <Route path ='/' element = {<Home/>}></Route> */}
       </Routes>
       </div>

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import * as sessionActions from "../Store/session"
+import * as sessionActions from "../../Store/session"
 import { useDispatch, useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 
@@ -37,7 +37,7 @@ export const Admin = () => {
         }
     });
 }  
-if(sessionUser) return <Navigate to="/"/>
+if(sessionUser) return <Navigate to="/admin/dashboard"/>
   return (
     <div className='flex flex-col bg-gray-100'>
       <div class="contain py-16">
