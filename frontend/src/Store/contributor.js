@@ -30,7 +30,7 @@ export const fetchContributor = () => async dispatch =>  {
 export const fetchAddContributor = (contributor) => async dispatch => {
     const {name, title, company, img, website, social, youtube, email } = contributor;
 
-    const response = await csrfFetch('/api/contributor', {
+    const response = await csrfFetch('/api/contributor/new', {
         method: "POST",
         body: JSON.stringify({
             name,
@@ -57,6 +57,8 @@ export default function contributorReducer(state = initialState, action) {
             const myContributor = {}
             action.payload.forEach(ele => myContributor[ele.id] = ele)
             return {...state, ...myContributor}
+        case ADD_CONTRIBUTOR:
+            return {...state, [action.payload.id]: action.payload}    
 
         default:
             return state    

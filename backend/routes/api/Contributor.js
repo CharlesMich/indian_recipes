@@ -13,4 +13,21 @@ router.get('/', async(req, res, next) => {
     return res.json(contributors)
 })
 
+// add contributors
+router.post('/new', async(req, res, next) => {
+    const {name, title, social, website, youtube, email, company, img} = req.body;
+
+    const newContributor = await Contributor.create({
+        name,
+        title,
+        social,
+        website,
+        youtube,
+        email,
+        company,
+        img
+    })
+    return res.json(newContributor)
+})
+
 module.exports = router
