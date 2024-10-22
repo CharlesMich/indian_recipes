@@ -6,7 +6,9 @@ const cuisineRouter = require('./cuisine.js');
 const dishRouter = require('./dish.js')
 const recipeRouter = require('./recipe.js');
 const mealRouter = require('./meal.js');
-const contributeRouter = require('./Contributor.js')
+const contributeRouter = require('./Contributor.js');
+const stepRouter = require('./step.js');
+const ingredientRouter = require('./Ingredient.js');
 
 const { restoreUser } = require('../../utils/auth.js');
 
@@ -24,7 +26,9 @@ router.use('/cuisine', cuisineRouter);
 router.use('/dish', dishRouter);
 router.use('/recipe', recipeRouter);
 router.use('/meal', mealRouter);
-router.use('/contributor', contributeRouter)
+router.use('/contributor', contributeRouter);
+router.use('/step', stepRouter);
+router.use('/ingredient', ingredientRouter);
 
 router.post('/test', (req, res) => {
   res.json({ requestBody: req.body });

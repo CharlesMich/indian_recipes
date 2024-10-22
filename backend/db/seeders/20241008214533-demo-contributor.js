@@ -20,7 +20,8 @@ module.exports = {
         website: "www.giftebbookstore.com",
         social: "www.facebook.com",
         youtube:"www.youtube.com",
-        email: "charleedongo@hotmail.com"
+        email: "charleedongo@hotmail.com",
+        status: "active"
     }
   ], {});
   },

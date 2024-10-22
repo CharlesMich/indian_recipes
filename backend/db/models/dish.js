@@ -37,7 +37,8 @@ module.exports = (sequelize, DataTypes) => {
     state_id: DataTypes.INTEGER,
     contributor_id:  DataTypes.INTEGER,
     meal_id: DataTypes.INTEGER,
-    notes: DataTypes.STRING
+    notes: DataTypes.STRING,
+    status: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Dish',

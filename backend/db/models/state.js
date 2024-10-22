@@ -21,7 +21,8 @@ module.exports = (sequelize, DataTypes) => {
   }
   State.init({
     name: DataTypes.STRING,
-    img: DataTypes.STRING
+    img: DataTypes.STRING,
+    status: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'State',

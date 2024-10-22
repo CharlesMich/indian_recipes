@@ -16,157 +16,194 @@ module.exports = {
     await queryInterface.bulkInsert(options, [
       {
           img: "../Images/andaman.png",
-          name: "Andaman and Nicobar"
+          name: "Andaman and Nicobar",
+           status: "active"
       },
       {
           img: "../Images/andhra.png",
-          name: "Andhra Pradesh"
+          name: "Andhra Pradesh",
+           status: "active"
       },
       {
           img: "../Images/arunachal.png",
-          name: "Arunachal Pradesh"
+          name: "Arunachal Pradesh",
+           status: "active"
       },
   
       {
           img: "../Images/assam.png",
-          name: "Assam"
+          name: "Assam",
+           status: "active"
       },
   
       {
          img: "../Images/bihar.png",
-         name: "Bihar"
+         name: "Bihar",
+          status: "active"
       },
   
       {
           img: "../Images/chandigarh.png",
-          name: "Chandigarh"
+          name: "Chandigarh",
+           status: "active"
       },
   
       {
          img: "../Images/chattisgarh.png",
-         name: "Chhattisgarh"
+         name: "Chhattisgarh",
+          status: "active"
       },
   
       {
          img: "../Images/dadar.png",
-         name: "Dadra & Nagar Haveli"
+         name: "Dadra & Nagar Haveli",
+          status: "active"
       },
   
       {
           img: "../Images/daman.png", 
-          name: "Daman and Diu"
+          name: "Daman and Diu",
+           status: "active"
       },
   
       {
           img: "../Images/delhi.png",
-          name: "Delhi"
+          name: "Delhi",
+           status: "active"
       },
       {
             img: "../Images/goa.png",
-            name: "Goa"
+            name: "Goa",
+             status: "active"
       },
       {
             img: "../Images/gujarat.png",
-            name: "Gujarat"
+            name: "Gujarat",
+             status: "active"
       },
       {
           img: "../Images/haryana.png",
-          name: "Haryana"
+          name: "Haryana",
+           status: "active"
       },
       {
           img: "../Images/himachal.png",
-          name: "Himachal Pradesh"
+          name: "Himachal Pradesh",
+           status: "active"
       },
       {
           img: "../Images/jammu.png",
-          name: "Jammu and Kashmir"
+          name: "Jammu and Kashmir",
+           status: "active"
       },{
          img: "../Images/jharkand.png",
-         name: "Jharkhand"
+         name: "Jharkhand",
+          status: "active"
       },
       {
            img: "../Images/karnataka.png",
-           name: "Karnataka"
+           name: "Karnataka",
+            status: "active"
       },
       {
            img: "../Images/kerala.png",
-          name: "Kerala"
+          name: "Kerala",
+           status: "active"
       },
       {
            img: "../Images/ladakh.png",
-          name: "Ladakh"
+          name: "Ladakh",
+           status: "active"
       },
       {
         img: "../Images/lakshwadeep.png",
-          name: "Lakshadweep"
+          name: "Lakshadweep",
+           status: "active"
       },
       {
           img: "../Images/madhyapradesh.png",
-          name: "Madhya Pradesh"
+          name: "Madhya Pradesh",
+           status: "active"
       },
       {
           img: "../Images/maharashtra.png",
-          name: "Maharashtra"
+          name: "Maharashtra",
+           status: "active"
       },
       {
            img: "../Images/manipur.png",
-          name: "Manipur"
+          name: "Manipur",
+           status: "active"
       },
       {
            img: "../Images/meghalaya.png",
-          name: "Meghalaya"
+          name: "Meghalaya",
+           status: "active"
       },
       {
            img: "../Images/mizoram.png",
-          name: "Mizoram"
+          name: "Mizoram",
+           status: "active"
       },
       {
           img: "../Images/nagaland.png",
-           name: "Nagaland"
+           name: "Nagaland",
+            status: "active"
       },
       {
           img: "../Images/orissa.png",
-          name: "Odisha"
+          name: "Odisha",
+           status: "active"
       },
       {
           img: "../Images/pondichery.png",
-          name: "Puducherry"
+          name: "Puducherry",
+           status: "active"
       },
       {
           img: "../Images/punjab.png",
-         name: "Punjab"
+         name: "Punjab",
+          status: "active"
       },
       {
            img: "../Images/rajasthan.png",
-          name: "Rajasthan"
+          name: "Rajasthan",
+           status: "active"
       },
       {
           img: "../Images/sikkim.png",
-          name: "Sikkim"
+          name: "Sikkim",
+           status: "active"
       },
       {
            img: "../Images/tamilnadu.png",
-        name: "Tamilnadu"
+        name: "Tamilnadu",
+         status: "active"
       },
       {
            img: "../Images/telangana.png",
-          name: "Telangana"
+          name: "Telangana",
+           status: "active"
       },
       {
           img: "../Images/tripura.png",
-          name: "Tripura"
+          name: "Tripura",
+           status: "active"
       },
       {
            img: "../Images/uttarpradesh.png",
-          name: "Uttar Pradesh"
+          name: "Uttar Pradesh",
+           status: "active"
       },
       {
           img: "../Images/uttarakand.png",
-         name: "Uttarakhand"
+         name: "Uttarakhand",
+          status: "active"
       },
       {
           img: "../Images/bengal.png",
-          name: "West Bengal"
+          name: "West Bengal",
+           status: "active"
       },
   ], {});
   

@@ -25,6 +25,10 @@ module.exports = {
       dish_id: {
         type: Sequelize.INTEGER
       },
+      status: {
+        type: Sequelize.STRING(20),
+        allowNull: false,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

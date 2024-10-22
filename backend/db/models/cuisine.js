@@ -24,6 +24,7 @@ module.exports = (sequelize, DataTypes) => {
     state_id: { type: DataTypes.INTEGER,
       allowNull: false,
     },
+    status: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'Cuisine',

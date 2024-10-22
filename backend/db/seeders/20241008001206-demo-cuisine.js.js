@@ -15,27 +15,32 @@ module.exports = {
       {
         state_id: 1,
         img: "../../Images/chetinaad.png",
-        name: "Chettinad"
+        name: "Chettinad",
+         status: "active"
     },
     {
         state_id: 2,
         img: "../../Images/indochinese.png",
-        name: "Indo-Chinese"
+        name: "Indo-Chinese",
+         status: "active"
     },
     {
         state_id: 3,
         img: "../../Images/malabar.png",
-        name: "Malabar"
+        name: "Malabar",
+         status: "active"
     },
     {
         state_id: 4,
         img: "../../Images/malwani.jpg",
-        name: "Malwani"
+        name: "Malwani",
+         status: "active"
     },
     {
         state_id: 5,
         img: "../../Images/tandoori.png",
-        name: "Tandoori"
+        name: "Tandoori",
+         status: "active"
     },
 
   ], {});

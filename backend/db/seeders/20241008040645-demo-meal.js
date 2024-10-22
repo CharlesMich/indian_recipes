@@ -13,44 +13,54 @@ module.exports = {
     await queryInterface.bulkInsert(options, [
       {
         img: "../../Images/appetizer.png",
-        name: "appetizer"
+        name: "appetizer",
+         status: "active"
     },
 
     {
         img: "../../Images/bread.png",
-        name: "bread"
+        name: "bread",
+         status: "active"
     },
     {
         img: "../../Images/idli.png",
-        name: "breakfast"
+        name: "breakfast",
+         status: "active"
     },
     {
         img: "../../Images/biryani.png",
-       name: "biriyani"
+       name: "biriyani",
+        status: "active"
     },
     {    
         img: "../../Images/curry.png",
-        name: "curry"
+        name: "curry",
+         status: "active"
     },
     {
         img: "../../Images/drink.png",
-        name: "drink"
+        name: "drink",
+         status: "active"
     },
     {
         img: "../../Images/snack.png",
-       name: "snack"
+       name: "snack",
+        status: "active"
     },
     {
         img: "../../Images/rice.png",
-        name: "rice"
+        name: "rice",
+         status: "active"
     },
     {
         img: "../../Images/soup.png",
-        name: "soup"
+        name: "soup",
+         status: "active"
     },
     {
         img: "../../Images/sweet.png",
-        name: "sweet"
+        name: "sweet",
+         status: "active"
     }
   ], {});
   },

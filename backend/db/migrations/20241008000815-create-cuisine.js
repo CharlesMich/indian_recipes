@@ -30,6 +30,10 @@ module.exports = {
           model: "States",
         }
       },
+      status: {
+        type: Sequelize.STRING(20),
+        allowNull: false,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
