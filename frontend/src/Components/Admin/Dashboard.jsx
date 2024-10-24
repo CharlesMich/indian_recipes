@@ -8,6 +8,10 @@ export const Dashboard = () => {
     <Link to={'/admin/dashboard/addcontributor'}><div>Add Contributors</div></Link>
     <div>update Contributors</div>
     <div>Delete Contributors</div>
+    <Link to ={'/admin/dashboard/dishes'}><div>View Dishes</div></Link>
+    <Link to ={'/admin/dashboard/adddishes'}><div>Add Dishes</div></Link>
+    <div>update Dishes</div>
+    <div>delete Dishes</div>
     </>
   )
 }

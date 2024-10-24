@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { Link } from "react-router-dom"
 import { useParams } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
-import { fetchAllDishes } from '../Store/dish'
+import { fetchAllDishes } from '../../Store/dish'
 
 export const Dishes = () => {
 

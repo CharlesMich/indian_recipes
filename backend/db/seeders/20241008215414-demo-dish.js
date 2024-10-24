@@ -23,7 +23,7 @@ module.exports = {
         contributor_id: 2,
         meal_id: 4,
         notes: "Biriyani from tamilnadu often contains coconut milk and coconut oil",
-         status: "active"
+        status: "active"
 
     }
   ], {});

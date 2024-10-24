@@ -2,7 +2,7 @@ import './App.css';
 import { Route, Routes } from "react-router-dom";
 import { Navigation } from './Components/Navigation';
 import {Home} from './Components/Home'
-import { Dishes } from './Components/Dishes';
+import { Dishes } from './Components/Dish/Dishes';
 import { Recipe } from './Components/Recipe/Recipe';
 import { Contact } from './Components/Contact';
 import { About } from './Components/About';
@@ -21,6 +21,7 @@ import { Admin } from './Components/Admin/Admin';
 import { Dashboard } from './Components/Admin/Dashboard';
 import { Contributor } from './Components/Contributors/Contributor';
 import { AddContributor } from './Components/Contributors/AddContributor';
+import { AddDish } from './Components/Dish/AddDish';
 
 function App() {
  
@@ -50,6 +51,7 @@ function App() {
       <Route path='/admin/dashboard' element={<Dashboard/>}></Route>
       <Route path='/admin/dashboard/contributors' element={<Contributor/>}></Route>
       <Route path='/admin/dashboard/addcontributor' element={<AddContributor/>}></Route>
+      <Route path='/admin/dashboard/adddishes' element={<AddDish/>}></Route>
       {/* <Route path ='/' element = {<Home/>}></Route> */}
       </Routes>
       </div>
