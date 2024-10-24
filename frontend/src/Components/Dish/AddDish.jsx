@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom'
 import { fetchAddDish } from '../../Store/dish'
 import { fetchAllCuisines } from '../../Store/cuisine'
 import {fetchAllStates} from '../../Store/state'
+import { fetchContributor } from '../../Store/contributor'
+import { fetchAllMeals } from '../../Store/meal'
 
 export const AddDish = () => {
 
@@ -11,8 +13,8 @@ export const AddDish = () => {
   const navigate = useNavigate();
 
   const states = useSelector(state => Object.values(state.myStates))
-  const constributors = useSelector(state => state.contributor)
-  const mealType = useSelector(state => state.meal)
+  const contributors = useSelector(state => Object.values(state.contributors))
+  const mealType = useSelector(state => Object.values(state.myMeals))
   const cuisines = useSelector(state => Object.values(state.cuisines))
   const sessionUser = useSelector(state => state.session.user)
 
@@ -31,7 +33,7 @@ export const AddDish = () => {
   const [hasSubmitted, setHasSubmitted] = useState(false)
   const [imageLoading, setImageLoading] = useState(false);
 
-  console.log(stateId, cuisineId)
+  console.log(stateId, cuisineId, contributorId, mealId)
 
   useEffect(()=> {
     dispatch(fetchAllCuisines())
@@ -39,6 +41,14 @@ export const AddDish = () => {
 
   useEffect(()=> {
     dispatch(fetchAllStates())
+  }, [])
+
+  useEffect(()=> {
+    dispatch(fetchContributor())
+  }, [])
+
+  useEffect(()=> {
+    dispatch(fetchAllMeals())
   }, [])
 
   const handleCancel = () => {
@@ -106,7 +116,7 @@ export const AddDish = () => {
 
               <div className="sm:col-span-2">
               <span><label htmlFor="cuisine_id" className="block mb-2 text-sm font-medium text-gray-900">Cuisine</label></span><span className="text-coral-red">{hasSubmitted && validationErrors.cuisineId && `${validationErrors.cuisineId}`}</span>
-              <select name = "avatar" id = "avatar" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" value={cuisineId} required onChange={(e) => setCuisineId(e.target.value)}>
+              <select name = "cuisine_id" id = "cuisine_id" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" value={cuisineId} required onChange={(e) => setCuisineId(e.target.value)}>
                         <option value={0}>None</option>
                         {cuisines.map(item=> (
                           <option value={item.id}>{item.name}</option>
@@ -117,7 +127,7 @@ export const AddDish = () => {
 
               <div className="sm:col-span-2">
                 <span><label htmlFor="state_id" className="block mb-2 text-sm font-medium text-gray-900">State</label></span><span className="text-coral-red">{hasSubmitted && validationErrors.stateId && `${validationErrors.stateId}`}</span>
-                <select name = "state" id = "state" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" value={stateId} required onChange={(e) => setStateId(e.target.value)}>
+                <select name = "state_id" id = "state_id" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" value={stateId} required onChange={(e) => setStateId(e.target.value)}>
                         <option value={0}>None</option>
                         {states.map(item=> (
                           <option value={item.id}>{item.name}</option>
@@ -127,14 +137,26 @@ export const AddDish = () => {
               </div>
 
               <div className="sm:col-span-2">
-                <span><label htmlFor="contributor_id" className="block mb-2 text-sm font-medium text-gray-900">Contributor</label></span><span className="text-coral-red">{hasSubmitted && validationErrors.name && `${validationErrors.name}`}</span>
-                <input type="text" name="contributor_id" id="contributor_id" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="eg: Chicken Korma" required value={contributorId} onChange={(e) => setContributorId(e.target.value)}/> 
+                <span><label htmlFor="contributor_id" className="block mb-2 text-sm font-medium text-gray-900">Contributor</label></span><span className="text-coral-red">{hasSubmitted && validationErrors.contributorId && `${validationErrors.contributorId}`}</span>
+                <select name = "contributor_id" id = "contributor_id" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" value={contributorId} required onChange={(e) => setContributorId(e.target.value)}>
+                        <option value={0}>None</option>
+                        {contributors.map(item=> (
+                          <option value={item.id}>{item.name}</option>
+                        ))}
+
+                      </select>
+              </div>
+              <div className="sm:col-span-2">
+                <span><label htmlFor="meal_id" className="block mb-2 text-sm font-medium text-gray-900">Meal type</label></span><span className="text-coral-red">{hasSubmitted && validationErrors.mealId && `${validationErrors.mealId}`}</span>
+                <select name = "meal_id" id = "meal_id" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" value={mealId} required onChange={(e) => setMealId(e.target.value)}>
+                        <option value={0}>None</option>
+                        {mealType.map(item=> (
+                          <option value={item.id}>{item.name}</option>
+                        ))}
+
+                      </select>
               </div>
 
-              <div className="sm:col-span-2">
-                <span><label htmlFor="meal_id" className="block mb-2 text-sm font-medium text-gray-900">Meal Type</label></span><span className="text-coral-red">{hasSubmitted && validationErrors.name && `${validationErrors.name}`}</span>
-                <input type="text" name="meal_id" id="meal_id" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="eg: Chicken Korma" required value={mealId} onChange={(e) => setMealId(e.target.value)}/> 
-              </div>
 
               <div className="sm:col-span-2">
                 <span><label htmlFor="notes" className="block mb-2 text-sm font-medium text-gray-900">Notes</label></span><span className="text-coral-red">{hasSubmitted && validationErrors.name && `${validationErrors.name}`}</span>
