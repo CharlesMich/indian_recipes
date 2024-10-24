@@ -1,7 +1,7 @@
 const AWS = require("aws-sdk");
 const multer = require("multer");
-// const s3 = new AWS.S3({ apiVersion: "2006-03-01" });
-const s3 = require('aws-sdk/clients/s3');
+const s3 = new AWS.S3({ apiVersion: "2006-03-01" });
+// const s3 = require('aws-sdk/clients/s3');
 const NAME_OF_BUCKET = "myaaprojects";
 
   // aws_access_key_id= process.env.AWS_ACCESS_KEY_ID,

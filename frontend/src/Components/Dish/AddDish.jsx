@@ -3,18 +3,18 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { fetchAddDish } from '../../Store/dish'
 import { fetchAllCuisines } from '../../Store/cuisine'
+import {fetchAllStates} from '../../Store/state'
 
 export const AddDish = () => {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const states = useSelector(state => state.states)
+  const states = useSelector(state => Object.values(state.myStates))
   const constributors = useSelector(state => state.contributor)
   const mealType = useSelector(state => state.meal)
   const cuisines = useSelector(state => Object.values(state.cuisines))
   const sessionUser = useSelector(state => state.session.user)
-
 
   const [name, setName] = useState('')
   const [subname, setSubname] = useState('')
@@ -29,11 +29,21 @@ export const AddDish = () => {
   const [status, setStatus] = useState('')
   const [validationErrors, setValidationErrors] = useState({})
   const [hasSubmitted, setHasSubmitted] = useState(false)
+  const [imageLoading, setImageLoading] = useState(false);
+
+  console.log(stateId, cuisineId)
 
   useEffect(()=> {
     dispatch(fetchAllCuisines())
   }, [])
 
+  useEffect(()=> {
+    dispatch(fetchAllStates())
+  }, [])
+
+  const handleCancel = () => {
+    navigate('/admin/dashboard')
+}
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -63,6 +73,7 @@ export const AddDish = () => {
         }
       });
     if (newDish) {
+      setImageLoading(false)
       navigate('/admin/dashboard')
     }
 
@@ -94,19 +105,25 @@ export const AddDish = () => {
               </div>
 
               <div className="sm:col-span-2">
-              <span><label htmlFor="cuisine_id" className="block mb-2 text-sm font-medium text-gray-900">Cuisine</label></span><span className="text-coral-red">{hasSubmitted && validationErrors.name && `${validationErrors.name}`}</span>
+              <span><label htmlFor="cuisine_id" className="block mb-2 text-sm font-medium text-gray-900">Cuisine</label></span><span className="text-coral-red">{hasSubmitted && validationErrors.cuisineId && `${validationErrors.cuisineId}`}</span>
               <select name = "avatar" id = "avatar" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" value={cuisineId} required onChange={(e) => setCuisineId(e.target.value)}>
                         <option value={0}>None</option>
                         {cuisines.map(item=> (
-                          <option value={item.name}>{item.name}</option>
+                          <option value={item.id}>{item.name}</option>
                         ))}
 
                       </select>
               </div>
 
               <div className="sm:col-span-2">
-                <span><label htmlFor="state_id" className="block mb-2 text-sm font-medium text-gray-900">State</label></span><span className="text-coral-red">{hasSubmitted && validationErrors.name && `${validationErrors.name}`}</span>
-                <input type="text" name="state_id" id="state_id" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="eg: Chicken Korma" required value={stateId} onChange={(e) => setStateId(e.target.value)}/> 
+                <span><label htmlFor="state_id" className="block mb-2 text-sm font-medium text-gray-900">State</label></span><span className="text-coral-red">{hasSubmitted && validationErrors.stateId && `${validationErrors.stateId}`}</span>
+                <select name = "state" id = "state" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" value={stateId} required onChange={(e) => setStateId(e.target.value)}>
+                        <option value={0}>None</option>
+                        {states.map(item=> (
+                          <option value={item.id}>{item.name}</option>
+                        ))}
+
+                      </select>
               </div>
 
               <div className="sm:col-span-2">
@@ -130,13 +147,16 @@ export const AddDish = () => {
               </div>
 
               <div className="sm:col-span-2">
-                <span><label htmlFor="img" className="block mb-2 text-sm font-medium text-gray-900">Image</label></span><span className="text-coral-red">{hasSubmitted && validationErrors.name && `${validationErrors.name}`}</span>
-                <input type="text" name="img" id="img" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="eg: Chicken Korma" required value={img} onChange={(e) => setImg(e.target.value)}/> 
+                <span><label htmlFor="img" className="block mb-2 text-sm font-medium text-gray-900">Upload file (Add an image of the dish fully garnished and ready to be served)</label></span><span className="text-coral-red">{hasSubmitted && validationErrors.img && `${validationErrors.img}`}</span>
+                <input type="file" name="img" id="img" accept=".jpg, .jpeg, .png, .webp" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="eg: Chicken Korma" required  onChange={(e) => setImg(e.target.files[0])}/> 
               </div>
-             
-             
-    
-             
+              <button type="submit" className="w-full items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-gray-900 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
+                        Add Catagory
+                    </button>
+                    <button
+                    onClick={handleCancel}
+                     className="w-full items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-coral-red rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">Cancel</button>    
+                     {(imageLoading)&& <p>Loading...</p>}
 
             </div>
 
