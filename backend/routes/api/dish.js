@@ -59,6 +59,15 @@ router.get('/', async(req, res, next)=> {
        
 })
 
+// get a single dish
+router.get('/:id', async(req, res, next) => {
+const id = req.params.id
+let dish = await Dish.findOne({
+    where:{id:id}
+})
+res.json([dish])
+})
+
 // Add a dish
 router.post('/new', singleMulterUpload("img"), handleValidationErrors, async(req, res, next) => {
     const {name, subname, englishname, img, serving_size, cuisine_id, state_id, contributor_id, meal_id, notes, status} = req.body
@@ -81,17 +90,5 @@ router.post('/new', singleMulterUpload("img"), handleValidationErrors, async(req
     return res.json(newDish)
 })
 
-
-// name: "Chicken Biryani",
-//         subname: "Dum method",
-//         englishname: "chicken cooked with flavored rice",
-//         img: "https://upload.wikimedia.org/wikipedia/commons/b/bb/Pumpkin_sambar.JPG",
-//         serving_size: 4,
-//         cuisine_id: 1,
-//         state_id:32,
-//         contributor_id: 2,
-//         meal_id: 4,
-//         notes: "Biriyani from tamilnadu often contains coconut milk and coconut oil",
-//         status: "active"
 
 module.exports = router
