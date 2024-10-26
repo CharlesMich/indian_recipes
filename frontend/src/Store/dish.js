@@ -65,7 +65,7 @@ export default function dishReducer(state = initialState, action){
         case ADD_DISH:
             return {...state, [action.payload.id]: action.payload}
         case LOAD_SINGLEDISH:
-            return {...state, ...action.payload}
+            return {[action.payload.id]: action.payload}
         default:
             return state    
     }

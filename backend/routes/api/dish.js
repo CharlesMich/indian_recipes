@@ -2,7 +2,7 @@ const express = require("express")
 const sequelize = require("sequelize")
 const { requireAuth } = require('../../utils/auth')
 const { handleValidationErrors } = require('../../utils/validation');
-const { Dish , Ingredient} = require('../../db/models')
+const { Dish , Ingredient, Step} = require('../../db/models')
 const {singleFileUpload, singleMulterUpload, multipleFilesUpload } =  require("../../awsS3");
 const {check} = require('express-validator')
 
@@ -63,7 +63,9 @@ router.get('/', async(req, res, next)=> {
 router.get('/:id', async(req, res, next) => {
 const id = req.params.id
 let dish = await Dish.findOne({
-    where:{id:id}
+    where:{id:id},
+    include:[{model:Ingredient, where:{dish_id: id}},{model: Step, where:{dish_id: id}} ],
+    // include: {model: Step, where:{dish_id: id}}
 })
 res.json([dish])
 })

@@ -2,22 +2,22 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
-import { fetchSingleDish } from '../../Store/dish'
+import { fetchRecipe } from '../../Store/recipe'
 
 export const Recipe = () => {
 
   const id = useParams().id
   const dispatch = useDispatch()
 
-  const dish = useSelector(state => Object.values(state.myDishes))
+  const dish = useSelector(state =>state.myRecipe)
 
   console.log(dish)
-
+  console.log(id)
   // const [data, setData] = useState(null)
 
   useEffect(() => {
-    dispatch(fetchSingleDish(id))
-  })
+    dispatch(fetchRecipe(id))
+  }, [dispatch])
 
   // useEffect(() => {
   //   fetch('../Data/recipes.json')
@@ -43,7 +43,7 @@ export const Recipe = () => {
 
   return (
     <div className="flex flex-col min-h-screen justify-between items-center bg-gray-100">
-      <div className="max-container2 flex  flex-col justify-between">{dish.map((item) => (
+      {/* <div className="max-container2 flex  flex-col justify-between">{dish.map((item) => (
         <div className="max-container flex  flex-col justify-between  flex-wrap gap-2 my-10  bg-white p-4 rounded-xl shadow-lg">
           <div className="font-semibold text-xl text-coral-red">{dish[0].name}, ({dish[0].subname})</div>
           <div className="flex flex-col sm:flex-row justify-between sm:gap-10 bg-white py-4 rounded-md">
@@ -71,7 +71,7 @@ export const Recipe = () => {
         </div>
       ))}
 
-      </div>
+      </div> */}
       <div
         className="py-8 px-8 w-xl justify-between mx-auto bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-end sm:space-y-0 sm:space-x-6 mb-10">
         <img className="block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0" src="https://tailwindcss.com/img/erin-lindford.jpg" alt="Woman's Face" />

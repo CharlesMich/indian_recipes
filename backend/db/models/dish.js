@@ -23,8 +23,11 @@ module.exports = (sequelize, DataTypes) => {
     Dish.belongsTo(
       models.Meal,
       {foreignKey: 'meal_id'}
-    )
-
+    ),
+    Dish.hasMany(
+      models.Step,
+      {foreignKey: "dish_id"}
+     )
     }
   }
   Dish.init({
