@@ -11,10 +11,6 @@ export const Recipe = () => {
 
   const dish = useSelector(state =>state.myRecipe)
 
-  console.log(dish)
-  console.log(id)
-  // const [data, setData] = useState(null)
-
   useEffect(() => {
     dispatch(fetchRecipe(id))
   }, [dispatch])
@@ -30,8 +26,6 @@ export const Recipe = () => {
     return <div>Loading...</div>
   }
 
-  // const recipe = Object.values(data).filter((item) => item.id == id)
-
   function ingList(list) {
     let newArr = []
     for (const [key, value] of Object.entries(list)) {
@@ -43,6 +37,29 @@ export const Recipe = () => {
 
   return (
     <div className="flex flex-col min-h-screen justify-between items-center bg-gray-100">
+      <div className="max-container2 flex  flex-col justify-between">
+      <div className="max-container flex  flex-col justify-between  flex-wrap gap-2 my-10  bg-white p-4 rounded-xl shadow-lg">
+      <div className="font-semibold text-xl text-coral-red">{dish.name}, {dish.subname}</div>
+      <div className="flex flex-col sm:flex-row justify-between sm:gap-10 bg-white py-4 rounded-md">
+            <div>Serving Size: {dish.serving_size}</div>
+            <div>State: {dish.state_id}</div>
+            <div>Cuisine: {dish.cuisine_id}</div>
+            <div>Meal type: {dish.meal_id}</div>
+          </div>
+          <div className=''><img src={dish.img} alt="new" width={1000} /></div>
+          <div className='flex flex-col  gap-10 my-10  items-center justify-evenly  bg-white rounded-md'>
+          <div className='grid-cols-2 p-5'><div className="font-semibold text-lg">Ingredients:</div> {dish.Ingredients && dish.Ingredients.map(((step, idx) => (
+            <div className='flex gap-2'>
+
+             
+              <div className='grid-cols-2'> {step.name}</div>
+              <div className='grid-cols-2'> {step.amount}</div>
+              <div className='grid-cols-2'> {step.unit}</div>
+            </div>
+            )))}</div>
+          </div>
+      </div>
+      </div>
       {/* <div className="max-container2 flex  flex-col justify-between">{dish.map((item) => (
         <div className="max-container flex  flex-col justify-between  flex-wrap gap-2 my-10  bg-white p-4 rounded-xl shadow-lg">
           <div className="font-semibold text-xl text-coral-red">{dish[0].name}, ({dish[0].subname})</div>
@@ -65,9 +82,6 @@ export const Recipe = () => {
           )))}</div>
           <div className='bg-white p-6 rounded-md'><div className="font-semibold text-lg">Notes:</div>  {item.notes}</div>
           <div>Source: {item.source}</div>
-
-
-
         </div>
       ))}
 
