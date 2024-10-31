@@ -20,7 +20,8 @@ module.exports = (sequelize, DataTypes) => {
     step_no: DataTypes.INTEGER,
     step: DataTypes.TEXT,
     dish_id: DataTypes.INTEGER,
-    status: DataTypes.STRING,
+    status: DataTypes.STRING
+    
   }, {
     sequelize,
     modelName: 'Step',
