@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Step.init({
     step_no: DataTypes.INTEGER,
-    step: DataTypes.STRING(2000),
+    step: DataTypes.TEXT,
     dish_id: DataTypes.INTEGER,
     status: DataTypes.STRING,
   }, {
