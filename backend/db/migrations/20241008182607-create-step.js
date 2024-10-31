@@ -20,7 +20,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       step: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(2000)
       },
       dish_id: {
         type: Sequelize.INTEGER
