@@ -191,7 +191,7 @@ module.exports = {
            status: "active"
       },
       {
-           img: "../Images/uttarpradesh.png",
+           img: "https://myaaprojects.s3.us-east-2.amazonaws.com/indian_recipes/uttarpradesh.png",
           name: "Uttar Pradesh",
            status: "active"
       },
