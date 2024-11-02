@@ -65,5 +65,7 @@ npm run sequelize db:seed:undo:all && npm run sequelize db:migrate:undo:all && n
 
 npm install && npm run render-postbuild && npm run build && npm run sequelize --prefix backend db:migrate && npm run sequelize --prefix backend db:seed:all
 
+
+
 <!-- heroku undo all migrations and seed and redo again -->
 heroku run npm run sequelize db:seed:undo:all && heroku run npm run sequelize db:migrate:undo:all && heroku run npm run sequelize db:migrate && heroku run npm run sequelize db:seed:all

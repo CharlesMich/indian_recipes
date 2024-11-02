@@ -186,17 +186,17 @@ module.exports = {
            status: "active"
       },
       {
-          img: "../Images/tripura.png",
+          img: "https://myaaprojects.s3.us-east-2.amazonaws.com/indian_recipes/tripura.png",
           name: "Tripura",
            status: "active"
       },
       {
            img: "https://myaaprojects.s3.us-east-2.amazonaws.com/indian_recipes/uttarpradesh.png",
-          name: "Uttar Pradesh",
+          name: "Uttar Pradeshh",
            status: "active"
       },
       {
-          img: "../Images/uttarakand.png",
+          img: "https://myaaprojects.s3.us-east-2.amazonaws.com/indian_recipes/uttarakand.png",
          name: "Uttarakhand",
           status: "active"
       },
