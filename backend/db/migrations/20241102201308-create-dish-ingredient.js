@@ -28,10 +28,10 @@ module.exports = {
         type: Sequelize.STRING
       },
       ingredient_id: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER
       },
       dish_id: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER
       },
       type: {
         type: Sequelize.STRING
