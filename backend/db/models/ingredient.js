@@ -6,6 +6,7 @@ const {
 
 module.exports = (sequelize, DataTypes) => {
   class Ingredient extends Model {
+    
     static associate(models) {
      Ingredient.belongsToMany(
       models.Dish,

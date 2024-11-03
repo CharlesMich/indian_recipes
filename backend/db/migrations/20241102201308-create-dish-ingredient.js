@@ -49,7 +49,7 @@ module.exports = {
     }, options);
   },
   async down(queryInterface, Sequelize) {
-    options.tablename = "Dishingredients"
+    options.tablename = "Dishingredients";
     await queryInterface.dropTable(options);
   }
 };
