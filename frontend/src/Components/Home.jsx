@@ -48,8 +48,8 @@ export const Home = () => {
       {activeTab === 0 && <State />}
       {activeTab === 1 && <Cuisine />}
       {activeTab === 2 && <Meal/>}
-      {activeTab === 3 && <Veg/>}
-      {activeTab === 4 && <NonVegetarian/>}
+      {activeTab === 3 && <Veg ingtype="veg"/>}
+      {activeTab === 4 && <NonVegetarian ingtype="nonveg"/>}
     </div>
   </div>
   )

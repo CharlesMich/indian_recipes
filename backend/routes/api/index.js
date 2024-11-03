@@ -28,7 +28,7 @@ router.use('/recipe', recipeRouter);
 router.use('/meal', mealRouter);
 router.use('/contributor', contributeRouter);
 router.use('/step', stepRouter);
-router.use('/ingredient', ingredientRouter);
+router.use('/ingredients', ingredientRouter);
 
 router.post('/test', (req, res) => {
   res.json({ requestBody: req.body });

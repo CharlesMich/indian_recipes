@@ -7,6 +7,7 @@ import recipeReducer from "./recipe";
 import dishReducer from "./dish";
 import mealReducer from "./meal";
 import contributorReducer from "./contributor";
+import ingredientReducer from "./ingredient";
 
 
 
@@ -17,7 +18,8 @@ const rootReducer = combineReducers({
     myRecipe: recipeReducer,
     myDishes: dishReducer,
     myMeals: mealReducer,
-    contributors: contributorReducer
+    contributors: contributorReducer,
+    ingredients: ingredientReducer
 })
 
 let enhancer;
