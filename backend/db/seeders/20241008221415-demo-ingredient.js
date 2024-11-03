@@ -13,75 +13,173 @@ module.exports = {
     options.tableName = 'Ingredients';
     await queryInterface.bulkInsert(options, [
       {
-        dish_id: 1,
         name: "onion",
-        amount: 2,
-        unit: "whole",
-         status: "active"
+        vegnonveg: "veg",
+        img: "",
+        highlightingredient: false,
+        status: "active"
     },
     {
-      dish_id: 1,
-      name: "tomota",
-      amount: 2,
-      unit: "whole",
+
+      name: "tomato",
+      vegnonveg: "veg",
+      img: "",
+      highlightingredient: false,
        status: "active"
   },
   {
-    dish_id: 1,
+   
     name: "green chillies",
-    amount: 2,
-    unit: "whole",
+    vegnonveg: "veg",
+    img: "",
+    highlightingredient: false,
      status: "active"
 },
 {
-  dish_id: 1,
+ 
   name: "ginger",
-  amount: 2,
-  unit: "whole",
+  vegnonveg: "veg",
+  img: "",
+  highlightingredient: false,
    status: "active"
 },
 {
-  dish_id: 1,
+  
   name: "garlic",
-  amount: 2,
-  unit: "whole",
+  vegnonveg: "veg",
+  img: "",
+  highlightingredient: false,
    status: "active"
 },
 {
-  dish_id: 1,
+ 
   name: "chicken",
-  amount: 2,
-  unit: "whole",
+  vegnonveg: "nonveg",
+  img: "",
+  highlightingredient: true,
    status: "active"
 },
 {
-  dish_id: 1,
-  name: "coriander powder",
-  amount: 2,
-  unit: "tbsp",
+ 
+  name: "beef",
+  vegnonveg: "nonveg",
+  img: "",
+  highlightingredient: true,
    status: "active"
 },
 {
-  dish_id: 1,
-  name: "chilli powder",
-  amount: 2,
-  unit: "tbsp",
+  
+  name: "pork",
+  vegnonveg: "nonveg",
+  img: "",
+  highlightingredient: true,
    status: "active"
 },
 {
-  dish_id: 1,
-  name: "cumin powder",
-  amount: 2,
-  unit: "tbsp",
+  
+  name: "fish",
+  vegnonveg: "nonveg",
+  img: "https://myaaprojects.s3.us-east-2.amazonaws.com/indian_recipes/fish.png",
+  highlightingredient: true,
    status: "active"
 },
 {
-  dish_id: 1,
-  name: "turmeric power",
-  amount: 2,
-  unit: "tbsp",
+  
+  name: "okra",
+  vegnonveg: "veg",
+  img: "",
+  highlightingredient: true,
    status: "active"
 },
+{
+  
+  name: "paneer",
+  vegnonveg: "veg",
+  img: "",
+  highlightingredient: true,
+   status: "active"
+},
+{
+  
+  name: "carrot",
+  vegnonveg: "veg",
+  img: "https://myaaprojects.s3.us-east-2.amazonaws.com/indian_recipes/bittermelon.png",
+  highlightingredient: true,
+   status: "active"
+},
+{
+  
+  name: "drumstick",
+  vegnonveg: "veg",
+  img: "https://myaaprojects.s3.us-east-2.amazonaws.com/indian_recipes/drumstick.png",
+  highlightingredient: true,
+   status: "active"
+},
+{
+  
+  name: "beetroot",
+  vegnonveg: "veg",
+  img: "",
+  highlightingredient: true,
+   status: "active"
+},
+{
+  
+  name: "potato",
+  vegnonveg: "veg",
+  img: "",
+  highlightingredient: true,
+   status: "active"
+},
+{
+  
+  name: "chickpea",
+  vegnonveg: "veg",
+  img: "",
+  highlightingredient: true,
+   status: "active"
+},
+{
+  
+  name: "cabbage",
+  vegnonveg: "veg",
+  img: "",
+  highlightingredient: true,
+   status: "active"
+},
+{
+  
+  name: "cauliflower",
+  vegnonveg: "veg",
+  img: "",
+  highlightingredient: true,
+   status: "active"
+},
+{
+  
+  name: "eggplant",
+  vegnonveg: "veg",
+  img: "https://myaaprojects.s3.us-east-2.amazonaws.com/indian_recipes/eggplant.png",
+  highlightingredient: true,
+   status: "active"
+},
+{
+  
+  name: "bittergourd",
+  vegnonveg: "veg",
+  img: "https://myaaprojects.s3.us-east-2.amazonaws.com/indian_recipes/bittermelon.png",
+  highlightingredient: true,
+   status: "active"
+},
+{
+  
+  name: "bellpepper",
+  vegnonveg: "veg",
+  img: "https://myaaprojects.s3.us-east-2.amazonaws.com/indian_recipes/bellpepper.png",
+  highlightingredient: true,
+   status: "active"
+},
+
   ], {});
   },
 
