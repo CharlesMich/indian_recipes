@@ -15,7 +15,9 @@ module.exports = (sequelize, DataTypes) => {
      Dish.belongsToMany(
       models.Ingredient,
       {through: 'quantity',
-        foreignKey: "dish_id"}
+        foreignKey: "dish_id",
+        otherKey: 'ingredient_id'
+      }
      ),
      Dish.belongsTo(
       models.Contributor,
