@@ -17,10 +17,10 @@ export const DishesByCuisine = () => {
     console.log(mealId, cuisineId )
 
     let params = new URLSearchParams({
-        'stateid': 'none',
+        'stateid': 0,
         'cuisineid': cuisineId,
         'mealid': mealId,
-        'myIngredient': "none"
+        'myIngredient':0
       })
 
       // console.log(Object.fromEntries(params))

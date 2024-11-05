@@ -23,33 +23,31 @@ router.get('/', async(req, res, next)=> {
        const mealid =  req.query.mealid
        const cuisineid = req.query.cuisineid
        const myIngredient = req.query.myIngredient
-
+        console.log(stateid, mealid, cuisineid, myIngredient)
+        console.log(typeof(+myIngredient))
        let dishes;
 
-        console.log(dishes, '.......................................dish')
-       if(myIngredient !== "none") {
-        console.log("..........1................")
+       if(+myIngredient !== 0) {
+        console.log("..........1................", dishes)
         dishes = await Dish.findAll(
             {
-            
-            include:{model: Ingredient, where:{name: myIngredient}
-            }
+            include:{model: Ingredient, where: {id: myIngredient}}
         })
        }
 
-       if(stateid === "none" && cuisineid === "none" && myIngredient === "none") {
+       if(+stateid === 0 && +cuisineid === 0 && +myIngredient === 0) {
         console.log("..........2................")
         dishes = await Dish.findAll({
             where: { meal_id: mealid }
         })
        }
 
-       if(stateid === "none" && cuisineid !== "none"){
+       if(+stateid === 0 && +cuisineid !== 0){
         console.log("..........3................")
         dishes = await Dish.findAll({
             where: { meal_id: mealid, cuisine_id: cuisineid }
         })
-       } else if(cuisineid === "none" && stateid !== "none") {
+       } else if(+cuisineid === 0 && +stateid !== 0) {
         console.log("..........4................")
         dishes = await Dish.findAll({
             where: { meal_id: mealid, state_id: stateid }
@@ -63,8 +61,10 @@ router.get('/', async(req, res, next)=> {
 router.get('/:id', async(req, res, next) => {
 const id = req.params.id
 let dish = await Dish.findOne({
-    where:{id:id},
+    // include: {model: Ingredient},
+    // where:{Ingredients.id:id},
     include:[{model:Ingredient, where:{dish_id: id}},{model: Step, where:{dish_id: id}} ],
+   
     // include: {model: Step, where:{dish_id: id}}
 })
 res.json([dish])

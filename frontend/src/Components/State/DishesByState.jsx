@@ -19,8 +19,8 @@ export const DishesByState = () => {
     let params = new URLSearchParams({
         'stateid': stateId,
         'mealid': mealId,
-        'cuisineid': 'none',
-         'myIngredient': "none"
+        'cuisineid': 0,
+         'myIngredient': 0
       })
 
       useEffect(()=> {

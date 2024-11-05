@@ -25,7 +25,21 @@ module.exports = {
         notes: "Biriyani from tamilnadu often contains coconut milk and coconut oil",
         status: "active"
 
-    }
+    },
+    {
+      name: "Mutton Biryani",
+      subname: "Absorption method",
+      englishname: "Mutton cooked with flavored rice",
+      img: "https://upload.wikimedia.org/wikipedia/commons/b/bb/Pumpkin_sambar.JPG",
+      serving_size: 4,
+      cuisine_id: 1,
+      state_id:32,
+      contributor_id: 2,
+      meal_id: 4,
+      notes: "Biriyani from tamilnadu often contains coconut milk and coconut oil",
+      status: "active"
+
+  }
   ], {});
   },
 
