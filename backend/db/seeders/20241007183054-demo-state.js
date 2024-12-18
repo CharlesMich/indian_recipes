@@ -55,7 +55,7 @@ module.exports = {
       },
   
       {
-         img: "https://myaaprojects.s3.us-east-2.amazonaws.com/indian_recipes/dadra.png",
+         img: "https://myaaprojects.s3.us-east-2.amazonaws.com/indian_recipes/dadar.png",
          name: "Dadra & Nagar Haveli",
           status: "active"
       },
@@ -166,8 +166,8 @@ module.exports = {
           status: "active"
       },
       {
-           img: "../Images/rajasthan.png",
-          name: "https://myaaprojects.s3.us-east-2.amazonaws.com/indian_recipes/rajasthan.jpg",
+           img: "https://myaaprojects.s3.us-east-2.amazonaws.com/indian_recipes/rajasthan.png",
+          name: "Rajasthan",
            status: "active"
       },
       {

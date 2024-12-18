@@ -11,7 +11,6 @@ const router = express.Router()
 router.get('/:id', async(req, res, next) => {
     const id = req.params.id
     
-   
     let dish = await Dish.findByPk(+id, {
         include:[{model:Ingredient, where:{dish_id: +id}},{model: Step, where:{dish_id: +id}}, {model: Contributor }],
          include: { all: true } 
@@ -22,11 +21,18 @@ router.get('/:id', async(req, res, next) => {
       ele.quantity = ele.Dishingredient.quantity
       ele.unit = ele.Dishingredient.quantity
       ele.method = ele.Dishingredient.method
-      
     })
-    console.log(efg)
-    res.json(efg)
-    
+
+    efg.contributor_name = dish.Contributor.name
+    efg.contributor_title = dish.Contributor.title
+    efg.contributor_company = dish.Contributor.company
+    efg.contributor_img = dish.Contributor.img
+    efg.contributor_website = dish.Contributor.website
+    efg.contributor_social = dish.Contributor.social
+    efg.contributor_youtube = dish.Contributor.youtube
+    efg.contributor_email = dish.Contributor.email
+
+    res.json([efg])
     })
 
 module.exports = router

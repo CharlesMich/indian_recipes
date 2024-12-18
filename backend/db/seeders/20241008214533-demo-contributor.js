@@ -16,7 +16,7 @@ module.exports = {
         name: "Chef Charles Michael",
         title: "Executive Chef",
         company: "Taj Coromandel",
-        img: "../../Images/chetinaad.png",
+        img: "https://myaaprojects.s3.us-east-2.amazonaws.com/profile-circle.png",
         website: "www.giftebbookstore.com",
         social: "www.facebook.com",
         youtube:"www.youtube.com",

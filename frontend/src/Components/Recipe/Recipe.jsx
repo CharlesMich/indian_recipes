@@ -9,13 +9,13 @@ export const Recipe = () => {
   const id = useParams().id
   const dispatch = useDispatch()
 
-  const dish = useSelector(state =>state.myRecipe)
+  const myDish = useSelector(state =>Object.values(state.myRecipe))
 
   useEffect(() => {
     dispatch(fetchRecipe(id))
   }, [dispatch])
 
- 
+ const dish = myDish[0]
   if (!dish) {
     return <div>Loading...</div>
   }

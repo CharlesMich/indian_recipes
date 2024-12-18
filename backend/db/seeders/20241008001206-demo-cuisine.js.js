@@ -42,6 +42,12 @@ module.exports = {
         name: "Tandoori",
          status: "active"
     },
+    {
+      state_id: 6,
+      img: "../../Images/mughlai.png",
+      name: "Mughlai",
+       status: "active"
+  }
 
   ], {});
   },

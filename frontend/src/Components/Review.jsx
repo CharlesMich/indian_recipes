@@ -2,10 +2,10 @@ import React from 'react'
 
 export const Review = () => {
   return (
-    <section class="pb-12 mx-auto md:pb-20 max-w-7xl">
+    <section class="max-container1 pb-12 mx-auto md:pb-20 max-w-7xl">
     <div class="py-4 text-center md:py-8">
-        <h4 class="text-base font-bold tracking-wide text-center uppercase text-teal-600">Reviews</h4>
-        <p class="mt-2 tracking-tight text-gray-900 text:xl md:text-2xl">Hear from the experts.</p>
+        <h4 class="text-left font-bold tracking-wide  uppercase text-teal-600">Reviews</h4>
+        <p class="mt-2 text-left tracking-tight text-gray-900 text:xl md:text-2xl">Hear from the experts.</p>
     </div>
 
     <div class="gap-8 space-y-8 md:columns-2 lg:columns-3">
@@ -16,7 +16,7 @@ export const Review = () => {
                 <div class="flex-1 flex justify-between items-start">
                     <div>
                         <h6 class="text-lg font-medium text-gray-700">Ravi Kumar</h6>
-                        <p class="text-sm text-gray-500">Car Enthusiast</p>
+                        <p class="text-sm text-gray-500">Food Author</p>
                     </div>
                     <a href="https://twitter.com/ravikumar/status/1234567890"
                         class="text-blue-500 hover:text-blue-600 ml-4">
@@ -24,9 +24,7 @@ export const Review = () => {
                     </a>
                 </div>
             </div>
-            <p class="mt-8">The quality of these seat covers is outstanding. They fit perfectly and add a touch of
-                luxury to
-                my car's interior. Highly recommend!</p>
+            <p class="mt-8">An excellent resource for home cooks! The recipes are clear, easy, and the results are always delicious. Highly recommend for anyone looking to enhance their culinary skills.</p>
         </div>
 
         <div class="p-8 bg-white border border-gray-100 shadow-2xl aspect-auto rounded-3xl shadow-gray-600/10">
@@ -35,15 +33,14 @@ export const Review = () => {
                 <div class="flex-1 flex justify-between items-start">
                     <div>
                         <h6 class="text-lg font-medium text-gray-700">Anjali Sharma</h6>
-                        <p class="text-sm text-gray-500">Marketing Professional</p>
+                        <p class="text-sm text-gray-500">Food Critic</p>
                     </div>
                     <a href="https://www.instagram.com/p/1234567890" class="text-blue-500 hover:text-blue-600 ml-4">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
             </div>
-            <p class="mt-8">I love the customizable designs! I was able to choose the perfect color to match my car's
-                interior. The material feels very durable.</p>
+            <p class="mt-8">Fantastic site with a diverse collection of recipes. Whether you're a beginner or an experienced chef, there's something for everyone. Clear instructions and great tips..</p>
         </div>
 
         <div class="p-8 bg-white border border-gray-100 shadow-2xl aspect-auto rounded-3xl shadow-gray-600/10">
@@ -52,7 +49,7 @@ export const Review = () => {
                 <div class="flex-1 flex justify-between items-start">
                     <div>
                         <h6 class="text-lg font-medium text-gray-700">Vijay Singh</h6>
-                        <p class="text-sm text-gray-500">Software Developer</p>
+                        <p class="text-sm text-gray-500">Culinary Enthusiast</p>
                     </div>
                     <a href="https://www.facebook.com/vijaysingh/posts/1234567890"
                         class="text-blue-500 hover:text-blue-600 ml-4">
@@ -60,9 +57,7 @@ export const Review = () => {
                     </a>
                 </div>
             </div>
-            <p class="mt-8">These seat covers are a game-changer for long drives. The added padding and ergonomic design
-                make
-                a huge difference in comfort.</p>
+            <p class="mt-8">A go-to for quick, tasty meals. I love how well-organized the recipes are, making it easy to find exactly what I'm looking for. Perfect for busy weeknights!</p>
         </div>
 
         <div class="p-8 bg-white border border-gray-100 shadow-2xl aspect-auto rounded-3xl shadow-gray-600/10">
@@ -71,7 +66,7 @@ export const Review = () => {
                 <div class="flex-1 flex justify-between items-start">
                     <div>
                         <h6 class="text-lg font-medium text-gray-700">Priya Patel</h6>
-                        <p class="text-sm text-gray-500">Mobile Developer</p>
+                        <p class="text-sm text-gray-500">Executive Chef</p>
                     </div>
                     <a href="https://twitter.com/priyapatel/status/1234567890"
                         class="text-blue-500 hover:text-blue-600 ml-4">
@@ -79,9 +74,7 @@ export const Review = () => {
                     </a>
                 </div>
             </div>
-            <p class="mt-8">The installation was super easy, and the instructions were clear. My car looks and feels
-                much more
-                upscale now.</p>
+            <p class="mt-8">Impressive variety of recipes, from comfort food to gourmet dishes. The step-by-step instructions make complex techniques feel approachable.</p>
         </div>
 
         <div class="p-8 bg-white border border-gray-100 shadow-2xl aspect-auto rounded-3xl shadow-gray-600/10">
@@ -90,7 +83,7 @@ export const Review = () => {
                 <div class="flex-1 flex justify-between items-start">
                     <div>
                         <h6 class="text-lg font-medium text-gray-700">Arjun Mehta</h6>
-                        <p class="text-sm text-gray-500">Manager</p>
+                        <p class="text-sm text-gray-500">Celebrity Chef</p>
                     </div>
                     <a href="https://www.instagram.com/p/1234567890" class="text-blue-500 hover:text-blue-600 ml-4">
                         <i class="fab fa-instagram"></i>
@@ -109,7 +102,7 @@ export const Review = () => {
                 <div class="flex-1 flex justify-between items-start">
                     <div>
                         <h6 class="text-lg font-medium text-gray-700">Sneha Rao</h6>
-                        <p class="text-sm text-gray-500">Product Designer</p>
+                        <p class="text-sm text-gray-500">Celebrity Chef</p>
                     </div>
                     <a href="https://www.facebook.com/sneharao/posts/1234567890"
                         class="text-blue-500 hover:text-blue-600 ml-4">
@@ -117,9 +110,7 @@ export const Review = () => {
                     </a>
                 </div>
             </div>
-            <p class="mt-8">Absolutely love these seat covers. They're stylish, comfortable, and were really easy to
-                install.
-                My car interior looks brand new!</p>
+            <p class="mt-8">This website is a treasure trove of culinary inspiration. Recipes are straightforward and the tips are helpful. Perfect for anyone wanting to expand their cooking repertoire.</p>
         </div>
 
     </div>

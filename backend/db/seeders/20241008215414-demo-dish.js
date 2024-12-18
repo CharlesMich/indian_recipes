@@ -20,7 +20,7 @@ module.exports = {
         serving_size: 4,
         cuisine_id: 1,
         state_id:32,
-        contributor_id: 2,
+        contributor_id: 1,
         meal_id: 4,
         notes: "Biriyani from tamilnadu often contains coconut milk and coconut oil",
         status: "active"
@@ -34,7 +34,7 @@ module.exports = {
       serving_size: 4,
       cuisine_id: 1,
       state_id:32,
-      contributor_id: 2,
+      contributor_id: 1,
       meal_id: 4,
       notes: "Biriyani from tamilnadu often contains coconut milk and coconut oil",
       status: "active"
