@@ -205,6 +205,11 @@ module.exports = {
           name: "West Bengal",
            status: "active"
       },
+      {
+          img: "https://myaaprojects.s3.us-east-2.amazonaws.com/indian_recipes/bengal.png",
+          name: "North India",
+           status: "active"
+      },
   ], {});
   
   },

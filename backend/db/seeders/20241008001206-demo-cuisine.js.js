@@ -46,7 +46,13 @@ module.exports = {
       state_id: 6,
       img: "../../Images/mughlai.png",
       name: "Mughlai",
-       status: "active"
+      status: "active"
+  },
+  {
+    state_id: 33,
+    img: "../../Images/mughlai.png",
+    name: "North Indian",
+    status: "active"
   }
 
   ], {});

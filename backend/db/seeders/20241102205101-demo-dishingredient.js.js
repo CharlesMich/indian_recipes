@@ -83,6 +83,16 @@ module.exports = {
         method: "chopped",
          type:""
        },
+
+       { dish_id: 7,
+        ingredient_id: 16,
+        quantity: 3,
+        unit: "whole",
+        method: "chopped",
+         type:""
+       },
+       
+
       ], {});
   },
 

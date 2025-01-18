@@ -39,7 +39,22 @@ module.exports = {
       notes: "Biriyani from tamilnadu often contains coconut milk and coconut oil",
       status: "active"
 
+  },
+  {
+    name: "Channa Masala",
+    subname: "also known as chole masala",
+    englishname: "chickpea curry",
+    img: "https://en.wikipedia.org/wiki/Chana_masala#/media/File:Chana_masala.jpg",
+    serving_size: 4,
+    cuisine_id: 7,
+    state_id: 33,
+    meal_id: 5,
+     notes: "A very popular North Indian dishes accompanied with Bhatura",
+      status: "active"
   }
+  
+
+
   ], {});
   },
 
